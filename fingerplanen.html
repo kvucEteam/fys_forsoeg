@@ -1,0 +1,42 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Interaktiv video</title>
+    <meta name="author" content="ato" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../library/css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="vid.css" type="text/css" />
+    <!-- Date: 2012-08-07 -->
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="col-xs-12">
+            <h1>Filmiske virkemidler og samtale</h1>
+            <div class="embed-responsive embed-responsive-16by9 col-xs-12 col-md-12">
+                <div id="player" class="embed-responsive-item"> </div>
+                <div id="time">
+                </div>
+                <div id="time_bar"></div>
+            </div>
+            <div id="overlay">
+                <div class="popud">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../library/vendor_scripts.js"></script><script src="../library/custom_scripts.js"></script>
+    <script src="vid_new.js"></script>
+    <script>
+        loadData("fingerplanen.json");
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+           one_line_footer();
+        });
+    </script>
+</body>
+
+</html>

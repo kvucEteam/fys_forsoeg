@@ -1,0 +1,171 @@
+[
+    {
+        "video": "EzI80kyiUB4"
+    },
+    {
+        "intro_header": "Fingerplanen"
+    },
+    {
+        "intro_text": "Videoquiz om filmiske virkemidler og samtale"
+    },
+    {
+        "intro_knap": "Start quiz"
+    },
+    {
+        "stops": [
+            {
+                "timestamp": 6,
+                "events": [
+                    {
+                        "eventtype": "svarknap",
+                        "tekst": "Er der tale om synkron eller asynkron lyd her?",
+                        "svar": [
+                            "Synkron lyd",
+                            "Asynkron lyd"
+                        ],
+                        "korrekt": [
+                            "1"
+                        ],
+                        "feedback": "Det er asynkron lyd. Den er lagt til billederne og giver dem en særlig stemning. Asynkron lyd er underlægningsmusik som her, men kan også være effektlyde."
+                    }
+                ]
+            },
+            {
+                "timestamp": 27,
+                "events": [
+                    {
+                        "eventtype": "svarknap",
+                        "tekst": "Hvad bruges klipningen og nærbillederne til her? ",
+                        "svar": [
+                            "De viser en energisk lærer og energiske elever",
+                            "De viser en uoplagt klasse og en famlende lærer "
+                        ],
+                        "korrekt": [
+                            "1"
+                        ],
+                        "feedback": "Klip og billedeudsnit sætter kommunikationssituationen. Og nærbillederne gør det tydeligt, at eleverne ikke er interesserede i det, der undervises i."
+                    }
+                ]
+            },
+            {
+                "timestamp": 44,
+                "events": [
+                    {
+                        "eventtype": "info",
+                        "tekst": "Læg mærke til, hvordan klipningen bruges til at udpege filmens tre hovedpersoner.",
+                        "svar": [
+                            "",
+                            ""
+                        ],
+                        "korrekt": [
+                            "0"
+                        ],
+                        "feedback": ""
+                    }
+                ]
+            },
+            {
+                "timestamp": 64,
+                "events": [
+                    {
+                        "eventtype": "svarknap",
+                        "tekst": "Hvordan kan man koble begreberne face og facework med nærbillederne her?",
+                        "svar": [
+                            "Læreren truer eleven og hævder sit face",
+                            "Læreren forsøger at hjælpe eleven"
+                        ],
+                        "korrekt": [
+                            "0"
+                        ],
+                        "feedback": "Nærbilleder tydeliggør ofte følelser - gode som dårlige. De kan bruges til at skabe spænding og komme tæt på filmens personer. "
+                    }
+                ]
+            },
+            {
+                "timestamp": 145,
+                "events": [
+                    {
+                        "eventtype": "svarknap",
+                        "tekst": "Hvorfor fremhæves detaljen med det knækkede kridt?",
+                        "svar": [
+                            "Det viser, at læreren taber ansigt",
+                            "Det viser, at læreren har travlt"
+                        ],
+                        "korrekt": [
+                            "0"
+                        ],
+                        "feedback": "Det knækkede kridt er et tegn på at læreren har tabt ansigt og er ved at miste besindelsen"
+                    }
+                ]
+            },
+            {
+                "timestamp": 162,
+                "events": [
+                    {
+                        "eventtype": "svarknap",
+                        "tekst": "Indtil videre har læreren overvejende været informationsudvekslende i sine sproghandlinger. Nu skifter hendes sproghandlinger karakter. fx da hun siger: &quot;Nu synes jeg, du skal tie stille Marie og så synes jeg, at Bastian skal gå uden for døren.&quot;",
+                        "svar": [
+                            "De er handlingsregulerende og følelsesudtrykkende",
+                            "De er rituelle og samtalestrukturerende"
+                        ],
+                        "korrekt": [
+                            "0"
+                        ],
+                        "feedback": "Læreren bliver tydeligt mere og mere presset. Og det kan man bl.a. aflæse i hendes sproghandlinger. Der er tale om indirekte sproghandlinger, der fungerer som ordrer."
+                    }
+                ]
+            },
+            {
+                "timestamp": 195,
+                "events": [
+                    {
+                        "eventtype": "svarknap",
+                        "tekst": "Hvilken betydning har nærbilledet af lærerens forkrampede pegefinger?",
+                        "svar": [
+                            "Det fungerer som en kulmination af hele scenen",
+                            "Det viser lærerens magt"
+                        ],
+                        "korrekt": [
+                            "0"
+                        ],
+                        "feedback": "Detaljen med pegefingeren er helt central og spiller an på filmens titel. Fingerplanen er umiddelbart det stof, der undervises i i klassen, men kan jo også tænkes, at være en plan som de to elever har gang i? Overvej selv, hvordan denne plan kunne se ud. "
+                    }
+                ]
+            },
+            {
+                "timestamp": 222,
+                "events": [
+                    {
+                        "eventtype": "svarknap",
+                        "tekst": "Igen kommer der baggrundmusik til billederne. Hvilken effekt har den og hvordan skaber den en ramme for filmen?",
+                        "svar": [
+                            "Musikken er en kontrast til den døde undervisning",
+                            "Musikken understreger den triste stemning"
+                        ],
+                        "korrekt": [
+                            "0"
+                        ],
+                        "feedback": "Musikkens opløftende og energiske stemning skaber en tydelige kontrast til det, der foregår inden for døren i undervisningen. "
+                    }
+                ]
+            },
+            {
+                "timestamp": 240,
+                "events": [
+                    {
+                        "eventtype": "svarknap",
+                        "tekst": "Hvilken betydning har den afsluttende tekst: &quot;Læs mere avis&quot;",
+                        "svar": [
+                            "Filmen viser sig lidt overraskende som en reklame",
+                            "Teksten er en poetisk novellefilm"
+                        ],
+                        "korrekt": [
+                            "0"
+                        ],
+                        "feedback": "Med afslutningen viser filmen sig som en reklame for vigtigheden af at læse avis. Det giver hele filmen en ekstra dimension. Dens tydelige budskab til sidst farver hele den samtalesituation vi har været vidne til i klasselokalet."
+                    }
+                ]
+            }
+        ]
+    }
+]

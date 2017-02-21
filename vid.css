@@ -1,0 +1,182 @@
+@import "http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400italic,600italic,700italic,800italic,400,300,600,700,800";
+.svarcontainer {
+    margin-top: 4%;
+}
+
+.ipad {
+    z-index: 6;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.h1 {
+    color: black;
+}
+
+.movie_h1 {
+    color: white;
+    padding: 40px 40px 0;
+    text-align: center;
+    top: 0;
+}
+
+.correct_answer {
+    color: white;
+}
+
+#player {
+    position: absolute;
+    z-index: 1;
+}
+
+#runde {
+    color: #fff;
+    left: 0;
+    margin-top: -120px;
+    opacity: 1;
+    padding-top: 0;
+    position: relative;
+    right: 0;
+    width: 350px;
+}
+
+.score, .spm_tekst, .correctliste {
+    color:white;
+}
+
+#overlay {
+    background-color: rgba(0, 113, 128, 0.5);
+    position: relative;
+    z-index: 75;
+    color: white;
+}
+
+.introknap,
+.btn_videre,
+.videre_knap,
+.forfra_knap {
+    background-color: transparent;
+    color:white;
+}
+
+.popud {
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 2%;
+    width: 90%;
+    z-index: 100;
+    height: 100%;
+}
+
+img {
+    cursor: pointer;
+    margin-left: 15px;
+    position: relative;
+}
+
+td {
+    margin: 3px;
+}
+
+.imgspan {
+    color: white;
+    cursor: pointer;
+    font-size: 18px !important;
+    left: 12px;
+    position: relative;
+    top: 4px;
+}
+
+#time {
+    bottom: 0;
+    color: white;
+    font-size: 10px;
+    padding-left: 5px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.html5-video-container {
+    background-color: white;
+}
+
+.intro {
+    height: 500px;
+    left: 0;
+    margin: 5% auto 0;
+    overflow: auto;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    width: 65%;
+}
+
+.introknap {
+    cursor: pointer;
+}
+
+.svar_btn {
+    margin-bottom: 11px;
+    white-space: normal !important;
+    width: 100%;
+}
+
+
+
+.feed_txt {
+    color: white;
+    line-height: 1.4;
+    margin-top: 0;
+}
+
+table {
+    margin-left: 33px;
+    margin-top: 40px;
+}
+
+.btn_videre {
+    position: absolute;
+    bottom: 0;
+}
+
+.videre_knap {}
+
+.forfra_knap {
+    margin-bottom: 0px;
+}
+
+#time_bar {
+    background-color: white;
+    bottom: 0;
+    height: 17px;
+    opacity: 0.4;
+    position: absolute;
+    width: 300px;
+    z-index: 2;
+}
+
+.correct_answers {
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    padding: 7px 19px;
+}
+
+.correctliste {
+    margin-left: 35px;
+    margin-top: 0;
+}
+
+.container_tekst {
+    height: 75%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 10%;
+}
+.h3{
+    font-size: 16px;
+}
