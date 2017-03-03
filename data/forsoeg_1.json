@@ -1,0 +1,15 @@
+[{
+    "slides": [{
+        "header": "introduktion",
+        "type": "html",
+        "html_content": "<h3>Så var der content</h3>",
+        "iframe_link": ""
+
+    },{
+        "header": "Step 5",
+        "type": "iframe",
+        "html_content": "<div class='embed-responsive embed-responsive-16by9'> <iframe src='videoquizzer/step5.html' frameborder='0' allowfullscreen></iframe> </div>",
+        "iframe_link": "videoquizzer/step5.html"
+
+    }]
+}]

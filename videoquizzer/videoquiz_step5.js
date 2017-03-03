@@ -42,6 +42,8 @@ var intro_text;
 //Indhold kun til den 'rene' player: 
 
 function loadData(url) {
+    console.log("loadData");
+    //parent.hello();
     $.ajax({
         url: url,
         // contentType: "application/json; charset=utf-8",  // Blot en test af tegnsaettet....
@@ -94,73 +96,6 @@ function loadData(url) {
 
 }
 
-// Indhold kun til den 'generiske player' : 
-
-function loadGenericData() {
-    runde = 0;
-    events_taeller = 0;
-    total_score = 0;
-    total_spm = 0;
-    playing = false;
-    console.log("loadData");
-    $(".popud").html("");
-    $(".intro").html("");
-    $.ajax({
-        //url: url,
-        // contentType: "application/json; charset=utf-8",  // Blot en test af tegnsaettet....
-        // dataType: 'json', // <------ VIGTIGT: Saadan boer en angivelse til en JSON-fil vaere! 
-        dataType: 'text', // <------ VIGTIGT: Pga. ???, saa bliver vi noedt til at angive JSON som text. 
-        async: true, // <------ VIGTIGT: Sikring af at JSON hentes i den rigtige raekkefoelge (ikke asynkront). 
-        success: function(data, textStatus, jqXHR) {
-
-            timestamp_Array = [];
-            JsonObj = JsonVideoInput_update;
-
-            console.log("success loadData");
-
-            for (var key in JsonObj) {
-                var objkey = Object.keys(JsonObj[key]);
-                //console.log("objkey:" + objkey);
-                if (objkey == "stops") {
-                    console.log("bingo: " + objkey);
-                    stops = JsonObj[key].stops;
-                    //console.log(stops[0].timestamp);
-                } else if (objkey == "video") {
-                    videoId = JsonObj[key].video;
-                } else if (objkey == "intro_header") {
-                    intro_header = JsonObj[key].intro_header;
-                } else if (objkey == "intro_knap") {
-                    intro_knap = JsonObj[key].intro_knap;
-                } else if (objkey == "intro_text") {
-                    intro_text = JsonObj[key].intro_text;
-                }
-                //console.log("Stops: " + stops);
-            }
-            //total_spille_tid = data.find('video').attr('total_tid');
-            if (stops) {
-                var lengde = stops.length;
-            } //data.find('runde').length;
-            popudwidth = 450;
-            popud_left = 0; //(bredde / 2) - (popudwidth / 2);
-
-            for (var i = 0; i < lengde; i++) {
-                timestamp_Array.push(stops[i].timestamp); //data.find('runde').eq(i).attr('timestamp'));
-            }
-
-            setUpTube();
-
-            //console.log (Stops[key].timestamp);
-            //console.log ("svarlenght:" + Stops[key].svar.length);
-            // console.log("Key : " + Key + ", overskrift_Array : " + overskrift_Array[Key] ); 
-            // console.log("JsonObj : " + JSON.stringify(JsonObj)  ); 
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-            console.log("Error!!!\njqXHR:" + jqXHR + "\ntextStatus: " + textStatus + "\nerrorThrown: " + errorThrown);
-        }
-    });
-
-}
-
 
 
 /// PLAYER SCRIPT - SETUP tube
@@ -192,11 +127,11 @@ function setupplayer() {
             'allowScriptAccess': 'always',
             'mediaPlaybackRequiresUserAction': false,
             'version': 3,
-            'controls': 0,
+            'controls': 1,
             'showinfo': 0,
             'modestbranding': 1,
-            'html5':1,
-            'playsinline':1,
+            'html5': 1,
+            'playsinline': 1,
             'rel': 0,
             'autoplay': false,
             wmode: 'transparent',
@@ -224,7 +159,7 @@ function setupplayer() {
 
 
                 // VI Tjekker hver 200 ms om videoen skal stoppes..: 
-                console.log("on readyness");
+                console.log("on ready");
                 checkTimer = setInterval(timerCheck, 200);
 
 
@@ -243,7 +178,7 @@ function timerCheck() {
     if (playing == true) {
         $(".ipad").hide();
     }
-console.log($(".embed-responsive-16by9").width());
+
     var playTime = Math.round(player.getCurrentTime());
 
     //Gør overlay og timebar responsive:
@@ -297,9 +232,9 @@ console.log($(".embed-responsive-16by9").width());
 // 4. The API will call this function when the video player is ready.
 
 function resumeVideo() {
+    //player.seekTo(20);
     player.playVideo();
     checkTimer = setInterval(timerCheck, 200);
-    console.log("resume..");
 }
 
 function introscreen() {
@@ -314,7 +249,7 @@ function introscreen() {
             $("#overlay").unbind();
         });
 
-          if (navigator.platform.indexOf("iPad") != -1 || navigator.platform.indexOf("iPhone") != -1) {
+        if (navigator.platform.indexOf("iPad") != -1 || navigator.platform.indexOf("iPhone") != -1) {
             showIosOverlay();
         } else {
             resumeVideo();
@@ -361,11 +296,23 @@ function stop_event(tal, taeller) {
             options_text = "";
             //$(".btn_videre").fadeIn().click(feed);
         }
+        /*=============================================
+        =            insert nav_stop here:            =
+        =============================================*/
+        else if (spm.eventtype == "nav_stop") {
+            options_text = options_text + "<div id ='" + i + "' class='btn svar_btn btn-info'>" + svar[i] + "</div>";
+            //$(".btn_videre").fadeIn().click(feed);
+        }
+
+
+        /*=====  End of insert nav_stop here:  ======*/
+
+
     }
     if (spm.eventtype == "info") {
-        $(".popud").html("<h5 class='score'>Stop nummer " + (runde + 1) + "/" + stops.length + "   (Information)</h5><div class='container_tekst'><div class='h4 spm_tekst'>" + tekst + "</h4><div class ='svarcontainer'>" + options_text + "</div></div></div><div class='btn btn-default btn-lg btn_videre'>Fortsæt</div>");
+        $(".popud").html("<h5 class='score'>Stop nummer " + (runde + 1) + "/" + stops.length + "   (Information)</h5><div class='container_tekst'><div class='h4 spm_tekst'>" + tekst + "</h4><div class ='svarcontainer'>" + options_text + "</div></div></div><div class='btn btn-default btn-lg btn_videre'>Afslut</div>");
     } else {
-        $(".popud").html("<h5 class='score'>Stop nummer " + (runde + 1) + "/" + stops.length + "&nbsp&nbsp&nbsp&nbsp&nbspKorrekte svar: <span class='score_num'>" + total_score + "</span></h5><div class='container_tekst'><div class='h4 spm_tekst'>" + tekst + "</h4><div class ='svarcontainer'>" + options_text + "</div></div></div><div class='btn btn-default btn-lg btn_videre'>Fortsæt</div>");
+        $(".popud").html("<h5 class='score'>Stop nummer " + (runde + 1) + "/" + stops.length + "&nbsp&nbsp&nbsp&nbsp&nbspKorrekte svar: <span class='score_num'>" + total_score + "</span></h5><div class='container_tekst'><div class='h4 spm_tekst'>" + tekst + "</h4><div class ='svarcontainer'>" + options_text + "</div></div></div><div class='btn btn-default btn-lg btn_videre'>Svar</div>");
 
     }
     $(".btn_videre").hide();
@@ -382,7 +329,7 @@ function stop_event(tal, taeller) {
 
         $(".svar_btn").click(function() {
 
-            if (spm.eventtype == "svarknap") {
+            if (spm.eventtype == "nav_stop") {
                 $(".svar_btn").removeClass("btn_chosen btn-primary");
                 $(".svar_btn").addClass("btn-info");
                 $(this).addClass("btn_chosen btn-primary");
@@ -411,58 +358,29 @@ function commit_answers() {
     var valgt;
     $(".btn_videre").hide();
 
-    if (spm.eventtype == "svarknap") {
-        valgt = $(".btn_chosen").attr("id");
-        if (valgt == spm.korrekt) {
-            //console.log("korrekt!");
-            total_score++;
-            $(".btn_chosen").css("background-color", "#0dcea0").css("border", "1px solid #0dcea0");
-            $(".score_num").fadeOut(20, function() {
-                $(".score_num").html(total_score);
-                $(".score_num").fadeIn(); // Animation complete.
-            });
-        } else {
-            $(".btn_chosen").css("background-color", "#ed3e3a").css("border", "1px solid #ed3e3a");
-        }
-    } else {
-        valgt = [];
-
-        $(".btn_chosen").each(function() {
-            var indeks = $(this).index();
-            var id = $(this).attr("id");
-            if (spm.korrekt.indexOf(id) > -1) {
-                $(this).css("background-color", "#2abb2a").css("border", "1px solid #2abb2a");
-                score++;
-                console.log("korrekt!");
-            } else {
-                fejl++;
-                $(this).css("background-color", "#ed3e3a").css("border", "1px solid #ed3e3a");
-                console.log("ikke korrekt: " + $(this).attr("id") + "," + spm.korrekt[1]);
-            }
-        });
-        if (score >= spm.korrekt.length && fejl === 0) {
-            console.log("Alt er korrekt... score: " + score + " antal_ svar: " + spm.korrekt.length);
-            total_score++;
-            $(".score_num").fadeOut(20, function() {
-                $(".score_num").html(total_score);
-                $(".score_num").fadeIn(); // Animation complete.
-            });
-        } else {
-            console.log("Ikke Alt er korrekt... score: " + score + "fejl : " + fejl + " antal_ svar: " + spm.korrekt.length);
-
-        }
-    }
 
     $(".svar_btn").each(function() {
         if ($(this).hasClass("btn_chosen")) {
+
+            valgt = $(this).index();
 
         } else {
             $(this).css("opacity", "0");
         }
     });
 
+    if (valgt == 0) {
 
-    feedback();
+console.log("valgt = 0");
+  player.seekTo(20);
+  player.playVideo();
+
+    } else if (valgt == 1) {
+
+    } else if (valgt == 2) {}
+
+
+    //feedback();
 }
 
 function feedback() {
@@ -545,7 +463,7 @@ function next_event() {
 function slutFeedback() {
     //console.log("slut");
     $("#overlay").unbind();
-    $(".popud").html("<h3 class = 'forfra'>Du har besvaret alle spørgsmålene. <br>Du svarede rigtigt på " + total_score + " ud af " + total_spm + " spørgsmål.</h3><div class='btn btn-default btn-lg forfra_knap'>Prøv igen</div><div class='btn btn-default btn-lg continue_film'>Se resten af filmen</div>");
+    $(".popud").html("<h3 class = 'forfra'>Du har besvaret alle spørgsmålene. <br>Du svarede rigtigt på " + total_score + " ud af " + total_spm + " spørgsmål.</h3><div class='btn btn-default btn-lg forfra_knap'>Prøv igen</div>");
     $(".forfra_knap").click(function() {
         //console.log ("ost");
         location.reload();

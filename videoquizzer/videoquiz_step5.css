@@ -3,15 +3,15 @@
     margin-top: 4%;
 }
 
+.h1 {
+    color: black;
+}
+
 .ipad {
     z-index: 6;
     position: absolute;
     bottom: 0;
     right: 0;
-}
-
-.h1 {
-    color: black;
 }
 
 .movie_h1 {
@@ -46,11 +46,13 @@
 }
 
 #overlay {
-    background-color: rgba(0, 113, 128, 0.5);
+    background-color: rgba(0, 113, 128, .95);
     position: relative;
     z-index: 75;
     color: white;
 }
+
+
 
 .introknap,
 .btn_videre,
@@ -59,6 +61,12 @@
     background-color: transparent;
     color:white;
 }
+
+.btn-default:hover {
+     
+    color:#006573;
+}
+
 
 .popud {
     left: 0;
@@ -125,7 +133,17 @@ td {
     width: 100%;
 }
 
+.btn_chosen {
+    /*background-color: #1da6db;
+    border: 1px solid #1da6db;
+    color: white;*/
+}
 
+.btn_chosen:hover {
+    /*background-color: #1da6db;
+    border: 1px solid #1da6db;
+    color: white;*/
+}
 
 .feed_txt {
     color: white;
@@ -177,6 +195,13 @@ table {
     overflow-x: hidden;
     margin-top: 10%;
 }
-.h3{
-    font-size: 16px;
+
+
+<<<<<<< HEAD
+.Hej_fra_Thomas{}
+=======
+
+.hejfraAnders{
+    color: green;
 }
+>>>>>>> 6d1fe7b61dcf96576b4c144d5cccd57af5b19c2c

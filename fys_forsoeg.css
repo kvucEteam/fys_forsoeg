@@ -1,0 +1,13 @@
+.btn-nav{
+    position: relative;
+}
+
+.lockicon{
+    position: absolute;
+    background-color: white;
+    border-radius: 14px;
+    padding: 3px 5px 3px 5px;
+    border: 1px solid black;
+    top: 20px;
+    right: -9px;
+}
