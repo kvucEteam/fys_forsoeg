@@ -1,0 +1,62 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Forsøg - Bølgelængde for laserlys</title>
+    <meta name="author" content="ato" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../../library/css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="../fys_forsoeg.css" type="text/css" />
+    <link rel="stylesheet" href="videoquiz_step5.css" type="text/css" />
+    <!-- Date: 2012-08-07 -->
+</head>
+
+<body>
+    <div class="col-xs-12">
+        <div class="embed-responsive embed-responsive-16by9 col-xs-12 col-md-12">
+            <div id="player"></div>
+        </div>
+    </div>
+    <script>
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+
+    function onYouTubePlayerAPIReady() {
+        player = new YT.Player('player', {
+            videoId: 'XwdjAQ3KNk0',
+            'rel': 0,
+            events: {
+                'onStateChange': function(event) {
+
+                    console.log("PS: " + event.data);
+                    if (event.data == YT.PlayerState.ENDED) {
+                        parent.slide_complete(2);
+                    }
+
+                }
+            }
+        });
+
+
+    }
+    </script>
+    <script src="../../library/vendor_scripts.js"></script>
+    <script src="../../library/custom_scripts.js"></script>
+    <script>
+    //getAjaxData("GET", "data/forsoeg_1.json", false, "json");
+    //loadData("videoquizzer/step5.json");
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        one_line_footer();
+    });
+    </script>
+</body>
+
+</html>

@@ -1,13 +1,13 @@
 [{
-        "video": "AM56a7_vEVM"
+        "video": "szfLBEN6CVI"
     },
 
     {
-        "intro_header": "Test af navigationsbaseret videoquiz"
+        "intro_header": ""
     },
 
     {
-        "intro_text": "Du skal gennem gå tre film, som beskriver databehandlingen."
+        "intro_text": "Du skal gennemgå tre film, som beskriver databehandlingen."
     },
 
     {
@@ -16,21 +16,39 @@
 
     {
         "stops": [{
-            "timestamp": 2,
+            "timestamp": 3,
             "events": [{
                 "eventtype": "nav_stop",
+                "tekst": "Hvad har du brug for nu?",
+
+                "svar": [
+                    "Brug for et hint?",
+                    "Giv mig svaret",
+                    "Klar til næste"
+                ],
+                "timestamps": [
+                    "3",
+                    "25"
+
+                ],
+                "hint": "Her er et hint der muligvis kommer i LateX eller noget andet sjovt."
+            }]
+        }, {
+            "timestamp": 20,
+            "events": [{
+                "eventtype": "show_stop",
                 "tekst": "Hvad har du brug for nu?",
                 "svar": [
                     "Brug for et hint?",
                     "Giv mig svaret",
-                    "Klar til næste" 
+                    "Klar til næste"
                 ],
                 "timestamps": [
-                    "4",
-                    "12"
+                    "3",
+                    "25"
 
                 ],
-                "feedback": "Det var heldigt. Klik på knappen herunder for at fortsætte."
+                "hint": "Her er et hint der muligvis kommer i LateX eller noget andet sjovt."
             }]
         }, {
             "timestamp": 30,
@@ -40,7 +58,7 @@
                 "svar": [
                     "Brug for et hint?",
                     "Giv mig svaret",
-                    "Klar til næste" 
+                    "Klar til næste"
                 ],
                 "timestamps": [
                     "4",
@@ -50,7 +68,7 @@
                 ],
                 "feedback": "Det var heldigt. Klik på knappen herunder for at fortsætte."
             }]
-    
+
         }, {
             "timestamp": 308,
             "events": [{
@@ -67,75 +85,6 @@
                 ],
                 "feedback": "Historikere bruger kilder til at underbygge deres beskrivelser af fortiden."
             }]
-        }, {
-            "timestamp": 413,
-            "events": [{
-                "eventtype": "svarknap",
-                "tekst": "Hvorfor er det vigtigt at stille spørgsmål til fortidens kilder?",
-                "svar": ["Fordi spørgsmål er vigtigere end svar", "Det gør det lettere at huske, hvad der står i kilden", "Fordi det er spørgsmålet, der afgør hvad vi kan bruge kilderne til."
-
-
-                ],
-                "korrekt": [
-                    "2"
-                ],
-                "feedback": "Der findes ikke som sådan dårlige kilder. Når du stiller kilderne spørgsmål, finder du ud af, hvad du kan bruge kilderne til at beskrive."
-            }]
-        }, {
-            "timestamp": 491,
-            "events": [{
-                "eventtype": "svarknap",
-                "tekst": "Hvad mener vi, når vi taler om kildens kontekst?",
-                "svar": [
-                    "Det indre sprog i teksten", "Den baggrund kilden er blevet til på og den tid, kilden er skrevet i", "Tekstens egen fortælling om begivenhederne den beskriver"
-                ],
-                "korrekt": [
-                    "1"
-                ],
-                "feedback": "Den historiske baggrund giver dig mere viden om, hvad der skete, da kilden blev til."
-            }]
-        }, {
-            "timestamp": 620,
-            "events": [{
-                "eventtype": "svarknap",
-                "tekst": "Hvordan kan kildens form afsløre kildens tendens?",
-                "svar": [
-                    "Sproget og kildens synsvinkel kan afsløre kildens tendens", "Det kan den ikke", "Kildens form afslører kildens kontekst"
-                ],
-                "korrekt": [
-                    "0"
-                ],
-                "feedback": "Kilden kan have et positivt eller kritisk syn på de begivenheder eller personer der beskrives."
-            }]
-        }, {
-            "timestamp": 735,
-            "events": [{
-                "eventtype": "svarknap",
-                "tekst": "Hvad er målet med kildekritikken?",
-                "svar": [
-                    "At undersøge om kilden er en førstehånds- eller andenhåndsberetning", "At undersøge hvad kilden kan bruges til, og hvad kilden ikke kan bruges til", "At undersøge om afsenderen har tendens"
-                ],
-                "korrekt": [
-                    "1"
-                ],
-                "feedback": "I en historieopgave - eller til en mundtlig eksamen i historie - skal du vise, at du kan inddrage kilderne til at fortælle om dit tema."
-            }]
-        }, {
-            "timestamp": 759,
-            "events": [{
-                "eventtype": "info",
-                "tekst": "Videoquizzen er slut. <br/>Forhåbentlig har du lært hvad kildeanalyse går ud på.",
-                "svar": [
-                    "", 
-                    ""
-                ],
-                "korrekt": [
-                    "0"
-                ],
-                "feedback": ""
-            }]
-        }
-]
+        }]
     }
 ]
-

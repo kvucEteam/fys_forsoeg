@@ -75,8 +75,8 @@ function loadData(url) {
             }
             //total_spille_tid = data.find('video').attr('total_tid');
             var lengde = stops.length; //data.find('runde').length;
-            popudwidth = 450;
-            popud_left = 0; //(bredde / 2) - (popudwidth / 2);
+            //popudwidth = 450;
+            //popud_left = 0; //(bredde / 2) - (popudwidth / 2);
 
             for (var i = 0; i < lengde; i++) {
                 timestamp_Array.push(stops[i].timestamp); //data.find('runde').eq(i).attr('timestamp'));
@@ -100,7 +100,7 @@ function loadData(url) {
 
 /// PLAYER SCRIPT - SETUP tube
 function setUpTube() {
-    //console.log("sut");
+    console.log("set up Tube");
     var tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
     var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -118,6 +118,8 @@ function onYouTubeIframeAPIReady() {
 }
 
 function setupplayer() {
+
+    console.log("SET UP PLAYER");
     $("#overlay").toggle();
     player = new YT.Player('player', {
         videoId: videoId,
@@ -183,6 +185,7 @@ function timerCheck() {
 
     //Gør overlay og timebar responsive:
     var embed_height = $(".embed-responsive").css("height");
+    console.log("embed_height: " + embed_height);
     $("#overlay").css("height", embed_height); //                    $("#time_bar").css("width", player.getCurrentTime() * 10 + "px");
     $("#time_bar").css("width", (player.getCurrentTime() / player.getDuration()) * $(".embed-responsive-16by9").width());
 
@@ -241,7 +244,7 @@ function introscreen() {
     player.pauseVideo();
 
     $("#overlay").fadeIn(1000);
-    $("#overlay").append("<div class='intro'><div class='h2'>" + intro_header + "</div><p class='h4 feed_txt'>" + intro_text + "</p><div class='btn btn-default btn-lg introknap'>" + intro_knap + "</div></div>");
+    $("#overlay").append("<div class='intro'><div class='h2'>" + intro_header + "</div><p class='h4 feed_txt'>" + intro_text + "</p><div class='btn btn-primary btn-lg introknap'>" + intro_knap + "</div></div>");
     $("#overlay").click(function() {
 
         $(this).fadeOut(1000, function() {
@@ -288,197 +291,53 @@ function stop_event(tal, taeller) {
     var eventtype;
 
     for (var i = 0; i < svar_length; i++) {
-        if (spm.eventtype == "svarknap") {
-            options_text = options_text + "<div id ='" + i + "' class='btn svar_btn btn-info'>" + svar[i] + "</div>";
-        } else if (spm.eventtype == "checkbox") {
-            options_text = options_text + "<div id ='" + i + "' class='btn svar_btn btn-info'>" + svar[i] + "</div>";
-        } else if (spm.eventtype == "info") {
-            options_text = "";
-            //$(".btn_videre").fadeIn().click(feed);
-        }
-        /*=============================================
-        =            insert nav_stop here:            =
-        =============================================*/
-        else if (spm.eventtype == "nav_stop") {
-            options_text = options_text + "<div id ='" + i + "' class='btn svar_btn btn-info'>" + svar[i] + "</div>";
-            //$(".btn_videre").fadeIn().click(feed);
-        }
 
+        options_text = options_text + "<div id ='" + i + "' class='btn svar_btn btn-primary'>" + svar[i] + "</div>";
+        //$(".btn_videre").fadeIn().click(feed);
 
         /*=====  End of insert nav_stop here:  ======*/
 
-
-    }
-    if (spm.eventtype == "info") {
-        $(".popud").html("<h5 class='score'>Stop nummer " + (runde + 1) + "/" + stops.length + "   (Information)</h5><div class='container_tekst'><div class='h4 spm_tekst'>" + tekst + "</h4><div class ='svarcontainer'>" + options_text + "</div></div></div><div class='btn btn-default btn-lg btn_videre'>Afslut</div>");
-    } else {
-        $(".popud").html("<h5 class='score'>Stop nummer " + (runde + 1) + "/" + stops.length + "&nbsp&nbsp&nbsp&nbsp&nbspKorrekte svar: <span class='score_num'>" + total_score + "</span></h5><div class='container_tekst'><div class='h4 spm_tekst'>" + tekst + "</h4><div class ='svarcontainer'>" + options_text + "</div></div></div><div class='btn btn-default btn-lg btn_videre'>Svar</div>");
-
-    }
-    $(".btn_videre").hide();
-
-    if (spm.eventtype == "info") {
-        // FAULTY CODE:::
-        $(".btn_videre").fadeIn()
-        $(".btn_videre").click(function() {
-            //  $("#overlay").fadeOut(1000);
-            next_event();
-        });
-
-    } else {
-
-        $(".svar_btn").click(function() {
-
-            if (spm.eventtype == "nav_stop") {
-                $(".svar_btn").removeClass("btn_chosen btn-primary");
-                $(".svar_btn").addClass("btn-info");
-                $(this).addClass("btn_chosen btn-primary");
-                $(this).removeClass("btn-info");
-
-
-            } else {
-                $(this).toggleClass("btn_chosen btn-primary");
-                $(this).toggleClass("btn-info");
-            }
-            if (chosen == false) {
-                $(".btn_videre").fadeIn().click(commit_answers);
-                chosen = true;
-            }
-
-        });
-
-
     }
 
-}
-
-function commit_answers() {
-    var score = 0;
-    var fejl = 0;
-    var valgt;
-    $(".btn_videre").hide();
 
 
-    $(".svar_btn").each(function() {
-        if ($(this).hasClass("btn_chosen")) {
+    var HTML = "<h5 class='score'>Stop nummer " + (runde + 1) + "/" + stops.length + "</h5>";
+    HTML += "<div class='container_tekst'>"; //<div class='h4 spm_tekst'>" + tekst + "</h4>";
+    HTML += "<div class ='svarcontainer'>" + options_text + "</div></div></div>";
+    $(".popud").html(HTML);
 
-            valgt = $(this).index();
+    //$(".btn_videre").hide();
+
+    if (spm.eventtype == "show_stop") {
+        $(".svar_btn").eq(0).hide(); 
+        $(".svar_btn").eq(1).hide(); 
+    }
+
+    $(".svar_btn").click(function() {
+
+        var indeks = $(this).index();
+
+        if (indeks == 0) {
+             show_hint(spm.hint);
 
         } else {
-            $(this).css("opacity", "0");
-        }
-    });
+            console.log("nav to: " + akt_runde.events[0].timestamps[indeks - 1]);
 
-    if (valgt == 0) {
-
-console.log("valgt = 0");
-  player.seekTo(20);
-  player.playVideo();
-
-    } else if (valgt == 1) {
-
-    } else if (valgt == 2) {}
-
-
-    //feedback();
-}
-
-function feedback() {
-    var correct_answers = "";
-
-    for (var i = 0; i < spm.korrekt.length; i++) {
-        correct_answers = correct_answers + "<li class='correctliste'>" + svar[spm.korrekt[i]] + "</li>";
-    }
-
-    //tween in feedback: 
-    $(".svarcontainer").delay(2000).fadeOut(1000, function() {
-        $(".spm_tekst").fadeOut(0);
-        $(".container_tekst").append("<div class='feedback'><div class='h3'>" + spm.feedback + "</div><div class = 'h4'><div class='correct_answers btn-success'>Rigtig besvarelse: </div>" + correct_answers + "<br/></div>");
-        $(".popud").append("<div class ='btn btn-default btn-lg introknap btn_videre'>Fortsæt</div>");
-        $(".feedback").fadeOut(0);
-        $(".feedback").fadeIn(1000);
-
-        $("#overlay").click(next_event);
-
-    });
-}
-
-
-
-
-function next_event() {
-    //alert(checkTimer);
-    //clearInterval(checkTimer);
-    if (spm.eventtype != "info") {
-        total_spm++;
-    }
-    //alert (events_taeller);
-    events_taeller++;
-    //console.log("next_event" + ", " + total_spm);
-    // hvis der er flere events tilbage i stoppet:
-
-
-    if (events_taeller < spm_length) {
-        console.log("events_taeller < spm_length. spmtaeller=" + events_taeller + " spm_length=" + spm_length);
-
-        $(".feedback").remove();
-        $("#overlay").unbind();
-
-        setTimeout(function() {
-            stop_event(runde, events_taeller);
-        }, 100);
-
-    } else {
-        console.log("events_taeller >= spm_length  spmtaeller=" + events_taeller + " spm_length=" + spm_length);
-
-        if (runde >= stops.length - 1) {
-            //console.log("tal > timestamp_Array.length - 2 ... tal: " + tal + " stops.length: " + stops.length);
-            console.log("case_1");
-            //NO MORE STOPS ///
-            //console.log("case_slut");
-            slutFeedback();
-        } else {
-
-            $("#overlay").fadeOut(1000, function() {
-                //console.log("intro??")
-                $(".feedback").remove();
-                $("#overlay").unbind();
-                resumeVideo();
-                events_taeller = 0;
-                runde++;
-            });
-        }
-    }
-}
-
-/*$('#overlay').delay(3000).fadeToggle('slow', function() {
-    //console.log("fjern overlay");
-    resumeVideo();
-    events_taeller = 0;
-    runde++;
-});*/
-
-
-
-function slutFeedback() {
-    //console.log("slut");
-    $("#overlay").unbind();
-    $(".popud").html("<h3 class = 'forfra'>Du har besvaret alle spørgsmålene. <br>Du svarede rigtigt på " + total_score + " ud af " + total_spm + " spørgsmål.</h3><div class='btn btn-default btn-lg forfra_knap'>Prøv igen</div>");
-    $(".forfra_knap").click(function() {
-        //console.log ("ost");
-        location.reload();
-    });
-
-    $(".continue_film").click(function() {
-        $("#overlay").fadeOut(1000, function() {
-            //console.log("intro??")
-            $(".feedback").remove();
-            $("#overlay").unbind();
-            resumeVideo();
-            clearInterval(checkTimer);
-            events_taeller = 0;
+            player.seekTo(akt_runde.events[0].timestamps[indeks - 1]);
+            player.playVideo();
             runde++;
-        });
+            $("#overlay").fadeOut();
+
+        }
+        console.log(indeks);
+
     });
 
+
+
+
+}
+
+function show_hint(txt){
+    microhint($(".svar_btn").eq(0), txt, "red");
 }

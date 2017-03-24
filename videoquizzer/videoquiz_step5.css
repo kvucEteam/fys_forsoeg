@@ -46,7 +46,7 @@
 }
 
 #overlay {
-    background-color: rgba(0, 113, 128, .95);
+    background-color: rgba(0, 113, 128, .5);
     position: relative;
     z-index: 75;
     color: white;
@@ -58,7 +58,7 @@
 .btn_videre,
 .videre_knap,
 .forfra_knap {
-    background-color: transparent;
+    
     color:white;
 }
 
@@ -70,11 +70,11 @@
 
 .popud {
     left: 0;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     position: absolute;
-    right: 0;
+    left: 70%;
     top: 2%;
-    width: 90%;
+    width: 30%;
     z-index: 100;
     height: 100%;
 }
@@ -130,7 +130,8 @@ td {
 .svar_btn {
     margin-bottom: 11px;
     white-space: normal !important;
-    width: 100%;
+    font-size: 1.3vw;
+    padding: 4px 16px 4px 15px;
 }
 
 .btn_chosen {
@@ -193,15 +194,20 @@ table {
     height: 75%;
     overflow-y: auto;
     overflow-x: hidden;
-    margin-top: 10%;
+    margin-top: 60%;
 }
 
-
-<<<<<<< HEAD
-.Hej_fra_Thomas{}
-=======
-
-.hejfraAnders{
-    color: green;
+.svar_btn{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 12px;
 }
->>>>>>> 6d1fe7b61dcf96576b4c144d5cccd57af5b19c2c
+
+.hint{
+    position: absolute;
+    left:20%;
+    top:20%;
+    font-size: 2vw;
+}
+

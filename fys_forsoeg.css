@@ -1,13 +1,62 @@
-.btn-nav{
+.btn-nav {
     position: relative;
 }
 
-.lockicon{
+.lockicon {
     position: absolute;
     background-color: white;
     border-radius: 14px;
     padding: 3px 5px 3px 5px;
-    border: 1px solid black;
+    border: 1px solid #777;
     top: 20px;
     right: -9px;
+    color: #777;
+}
+
+.top_nav_container {
+    margin-bottom: 30px;
+}
+
+.info_label,
+{
+    position: absolute;
+    z-index: 10;
+}
+
+
+@media all and (max-width: 1170px) {
+    .balance_detalje_label,
+    .genopretning_detalje_label,
+    .gui_container,
+    .btn_tjek,
+    .label,
+    .ok_btn,
+    .btn_forfra .spm {
+        font-size: 1.3vw;
+    }
+    .spm_numbers {
+        font-size: 1vw;
+    }
+}
+
+@media all and (min-width: 1171px) {
+    .balance_detalje_label,
+    .genopretning_detalje_label,
+    .btn_tjek,
+    .label,
+    .ok_btn,
+    .btn_forfra .gui_container,
+    .spm {
+        font-size: 14px;
+    }
+    .spm_numbers {
+        font-size: 10px;
+    }
+}
+.bg_container{
+	position: relative;
+}
+
+.detalje_label{
+	position: absolute;
 }

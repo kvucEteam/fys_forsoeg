@@ -1,0 +1,47 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Forsøg - Bølgelængde for laserlys</title>
+    <meta name="author" content="ato" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="http://localhost:8080/library/css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="../fys_forsoeg.css" type="text/css" />
+    <link rel="stylesheet" href="videoquiz_step5.css" type="text/css" />
+    <!-- Date: 2012-08-07 -->
+</head>
+
+<body>
+<div id="player"></div>
+    <script>
+
+    var player;
+    
+
+    function onYouTubePlayerAPIReady() {
+        player = new YT.Player('player', {
+            height: '390',
+            width: '640',
+            videoId: 'JV7K8CvA26I'
+        });
+
+
+    }
+    </script>
+    <script src="../../library/vendor_scripts.js"></script>
+    <script src="../../library/custom_scripts.js"></script>
+    <script src="../fys_forsoeg.js"></script>
+    
+    <script>
+    //getAjaxData("GET", "data/forsoeg_1.json", false, "json");
+    //loadData("videoquizzer/step5.json");
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        one_line_footer();
+    });
+    </script>
+</body>
+
+</html>
