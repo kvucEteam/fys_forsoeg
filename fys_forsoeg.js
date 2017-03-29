@@ -3,9 +3,15 @@ var complete_slides = 0;
 var active_slide = 0;
 var saveArray = [];
 
+var audio = document.getElementById("myAudio");
+
 $(document).ready(function() {
     returnLastStudentSession();
     init();
+
+    $("#myAudio").hide();
+
+
 });
 
 
@@ -14,6 +20,7 @@ $(document).ready(function() {
 =============================================*/
 
 function init() {
+
     jsonSlides = jsonData[0].slides;
     var navHTML = "";
     var contentHTML = "";
@@ -29,6 +36,10 @@ function init() {
 
     $(".main_container").html(contentHTML);
     $(".top_nav_container").html(navHTML);
+
+    $(".top_nav_container").append("<a href='data/data_boelge.xlsx'> <div class='btn btn-success btn_excel'>Download excel</div></a>");
+
+
 
 
 
@@ -57,18 +68,32 @@ function init() {
 
 
 
-    for (var i = 0; i < jsonSlides[3].labels.length; i++) {
-        var element = jsonSlides[3].labels[i];
+    for (var i = 0; i < jsonSlides[2].labels.length; i++) {
+        var element = jsonSlides[2].labels[i];
         console.log(i + " punkt");
         //viewArray[state].append("<div><img class='gif' src=" + element.pics[state] + "></div>");
-        $(".bg_container").append("<span class='btn btn-xs btn-default detalje_label'><span class='glyphicon glyphicon-info-sign'> </span> " + element.labels_txt + "</span>");
-        $(".detalje_label").eq(i).css("left", element.label_pos[0] + "%").css("top", element.label_pos[1] + "%")
+        $(".bg_container_2").append("<span class='detalje_label detalje_label_2 glyphicon glyphicon-info-sign'></span>");
+        $(".detalje_label_2").eq(i).css("left", element.label_pos[0] + "%").css("top", element.label_pos[1] + "%")
             //$(".gif").eq(i).css("left", element.balance_pos[0] + "%").css("top", element.balance_pos[1] + "%");
     }
 
-    $(".detalje_label").click(function() {
+    for (var i = 0; i < jsonSlides[4].labels.length; i++) {
+        var element = jsonSlides[4].labels[i];
+        console.log(i + " punkt");
+        //viewArray[state].append("<div><img class='gif' src=" + element.pics[state] + "></div>");
+        $(".bg_container_4").append("<span class='detalje_label detalje_label_4 glyphicon glyphicon-info-sign'></span>");
+        $(".detalje_label_4").eq(i).css("left", element.label_pos[0] + "%").css("top", element.label_pos[1] + "%")
+            //$(".gif").eq(i).css("left", element.balance_pos[0] + "%").css("top", element.balance_pos[1] + "%");
+    }
+
+    $(".detalje_label_2").click(function() {
         var indeks = $(this).index() - 1;
-        microhint($(this), jsonSlides[3].labels[indeks].info_txt, "blue");
+        microhint($(this), jsonSlides[2].labels[indeks].info_txt, "white");
+    });
+
+    $(".detalje_label_4").click(function() {
+        var indeks = $(this).index() - 1;
+        microhint($(this), jsonSlides[4].labels[indeks].info_txt, "white");
     });
 
     //initVidQuiz(5);
@@ -82,6 +107,8 @@ function init() {
 
 function clicked_nav(obj) {
 
+    $(".microhint").remove();
+
     document.getElementById('iframe_vid').contentWindow.helloframe();
 
     initSimplePlayer(0);
@@ -93,18 +120,18 @@ function clicked_nav(obj) {
     console.log("AS: " + active_slide);
 
     //if (obj.hasClass("locked")) {
-        console.log("Se filmen før du går videre");
+    console.log("Se filmen før du går videre");
     //} else {
 
-        $(".slide_container").each(function() {
-            $(this).fadeOut(0);
-        })
+    $(".slide_container").each(function() {
+        $(this).fadeOut(0);
+    })
 
-        $(".slide_container").eq(indeks).fadeIn(500);
+    $(".slide_container").eq(indeks).fadeIn(500);
 
-        $(".btn-nav").removeClass("vuc-primary");
-        $(".btn-nav").eq(indeks).addClass("vuc-primary");
-   // }
+    $(".btn-nav").removeClass("vuc-primary");
+    $(".btn-nav").eq(indeks).addClass("vuc-primary");
+    // }
 
     //$(".new_window_link").hide();
     saveData();
@@ -126,6 +153,8 @@ function slide_complete(comp_num) {
     $(".glyphicons").eq(active_slide + 1).removeClass("glyphicons-lock").addClass("glyphicons-unlock");
     $(".btn-nav").eq(active_slide + 1).removeClass("locked");
     saveData();
+
+    audio.play();
 }
 
 function returnLastStudentSession() {
@@ -143,9 +172,9 @@ function returnLastStudentSession() {
 
     console.log("savedData: " + complete_slides);
 
-    $(".btn-nav").each(function(){
+    $(".btn-nav").each(function() {
 
-        if ($(this).index() < complete_slides){
+        if ($(this).index() < complete_slides) {
             console.log("CSJASJF: " + i)
         }
 

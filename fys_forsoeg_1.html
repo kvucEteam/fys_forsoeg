@@ -7,9 +7,8 @@
     <meta name="author" content="ato" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../library/css/styles.css" type="text/css" />
-  
     <link rel="stylesheet" href="fys_forsoeg.css" type="text/css" />
-      <link rel="stylesheet" href="videoquizzer/videoquiz_step5.css" type="text/css" />
+    <link rel="stylesheet" href="videoquizzer/videoquiz_step5.css" type="text/css" />
     <!-- Date: 2012-08-07 -->
 </head>
 
@@ -17,17 +16,19 @@
     <div class="container-fluid">
         <h1>Bølgelængde for laserlys</h1>
         <div class="top_nav_container"></div>
+
         <div class="main_container"></div>
     </div>
+    <audio controls id="myAudio">
+        <source src="audio/soundtest_open.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+    </audio>
     <script src="../library/vendor_scripts.js"></script>
     <script src="../library/custom_scripts.js"></script>
-    
     <script src="fys_forsoeg.js"></script>
     <script src="videoquizzer/videoquiz_step5.js"></script>
-
     <script>
     getAjaxData("GET", "data/forsoeg_1.json", false, "json");
-    
+
     console.log("hej");
     </script>
     <script type="text/javascript">

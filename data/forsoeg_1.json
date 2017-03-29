@@ -1,40 +1,34 @@
 [{
     "slides": [{
-        "header": "Introduktion",
+        "header": "Introduktion og formål",
         "type": "html",
         "html_content": "<h2>Introduktion til forsøget</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' id='iframe_vid' src='videoquizzer/mtubes.html'></iframe></div>",
         "iframe_link": "",
         "video_id": "d7GItSvdoZo"
 
     }, {
-        "header": "Formål",
+        "header": "Opstilling",
         "type": "html",
-        "html_content": "<h2>Forsøgets formål</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' src='videoquizzer/mtubes2.html'></iframe></div>",
+        "html_content": "<h2>Introduktion til forsøget</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' id='iframe_vid' src='videoquizzer/mtubes2.html'></iframe></div>",
         "iframe_link": ""
 
     }, {
-        "header": "Opstilling",
+        "header": "Interaktiv opstilling",
         "type": "html",
-        "html_content": "<h2>Udførelse af forsøget</h2>",
-        "iframe_link": ""
-
-    }, {    
-        "header": "Opstillingsplan",
-        "type": "html",
-        "html_content": "<h2>Opstillingsplan</h2><div class='bg_container'> <img src='img/laser_info.png' class='bg_image img-responsive' /> </div> ",
+        "html_content": "<h2>Interaktiv opstilling</h2><div class='bg_container bg_container_2'> <img src='img/laser_info_2.png' class='bg_image img-responsive' /> </div> ",
         "iframe_link": "",
         "labels": [{
             "labels_txt": "L",
-            "label_pos": [67, 5],
-            "info_txt": "L står for længde. Du måler længden fra gitteret til væggen"
+            "label_pos": [22, 58],
+            "info_txt": "<h3>LASER </h3>Hvidt lys, som vi kender fra Solen, er sammensat af mange forskellige farver. Det ser vi, når lyset afbøjes i regndråber og danner regnbuer på himlen. Laserlys er anderledes, bl.a. fordi det kun har én bestemt farve. Lys er elektromagnetiske bølger, og en bestemt farve svarer til en bestemt bølgelængde. En laser har altså en meget veldefineret bølgelængde. Denne bølgelængde er dog forskellig for forskellige typer laser. En rød laser kan fx have bølgelængden 650 nm. En grøn laser kan fx have bølgelængden 532 nm. <br/>En anden karakteristisk egenskab ved laserlys er, at det kan fokuseres i meget højere grad end andre former for lys. En lysstråle og den energi, den transporterer, kan altså koncentreres på et meget lille areal. Dette gør det muligt at lave laser-pointere og CD/DVD-afspillere, som de fleste kender, men samme princip gør det muligt at bruge laserlys til fx kirurgi og svejsning."
         }, {
             "labels_txt": "0",
-            "label_pos": [74, 53],
-            "info_txt": "0 står for teta. Det symboliserer en vinkel. Her på tegningen viser den afbøjningsvinlen mellem nulte-ordensstrålen og første-ordensstrålen"
+            "label_pos": [38, 68],
+            "info_txt": "<h3>GITTER</h3>Et optisk gitter er en glasplade, hvori der er ridset nogle meget fine linjer. Linjerne ligger meget tæt med typisk flere hundrede linjer inden for en enkelt millimeter. Linjerne virker som små spalter, som lys kan trænge igennem. Hvis spaltebredden er tilstrækkelig lille, dvs. sammenlignelig med lysets bølgelængde, vil lyset afbøjes, når det passerer igennem. Denne afbøjning kaldes diffraktion. Lys med forskellige bølgelængder vil afbøjes i forskellige vinkler. Derfor kan man bruge gitteret til at splitte lys med mange forskellige bølgelængder op i de enkelte bølgelængder. Ved at måle afbøjningsvinklerne kan man også regne tilbage og finde ud af, hvilken bølgelængde lyset havde. Et optisk gitter kan altså bruges til at analysere, hvilke bølgelængder en lysstråle indeholder."
         }, {
             "labels_txt": "n",
-            "label_pos": [91, 43],
-            "info_txt": "Bag et gitter, hvori der er ridset mange linjer ved siden af hinanden, vil der være forskellige retninger, hvori der hele tiden er konstruktiv interferens. Langs disse retninger vil lyset altså udbrede sig bag gitteret. Det er disse retninger, der svarer til strålerne af nulte, første, anden orden og så videre."
+            "label_pos": [65, 51],
+            "info_txt": "<h3>INTERFERENSMØNSTER</h3>Når lys går gennem spalterne i gitteret, vil der bag hver linje i gitteret udbredes en (halv) ringformet lysbølge, ligesom når man smider en sten i vandet. Alle disse ringbølger vil flette sig ind i hinanden. Når to bølgetoppe eller bølgedale møder hinanden opstår såkaldt konstruktiv interferens, dvs. bølgen bliver på dette sted og dette tidspunkt kraftigere. Når bølgetop og bølgedal møder hinanden, vil der omvendt opstå såkaldt destruktiv interferens, dvs. bølgerne udsletter hinanden på dette sted og dette tidspunkt. Bag et gitter, hvori der er ridset mange linjer ved siden af hinanden, vil der være forskellige retninger, hvori der hele tiden er konstruktiv interferens. Langs disse retninger vil lyset altså udbrede sig bag gitteret. Det er disse retninger, der svarer til strålerne af nulte, første, anden orden og så videre."
         }]
 
     }, {
@@ -42,6 +36,25 @@
         "type": "html",
         "html_content": "<h2>Teorien bag eksperimentet</h2>",
         "iframe_link": ""
+
+    }, {
+        "header": "Interaktiv teori repetition",
+        "type": "html",
+        "html_content": "<h2>Interaktiv teori repetition</h2><div class='bg_container bg_container_4'> <img src='img/laser_info_3.png' class='bg_image img-responsive' /> </div> ",
+        "iframe_link": "",
+        "labels": [{
+            "labels_txt": "L",
+            "label_pos": [63, 4],
+            "info_txt": "<h3>Længde </h3>L står for længde. Du måler længden fra gitteret til væggen."
+        }, {
+            "labels_txt": "0",
+            "label_pos": [71, 54],
+            "info_txt": "<h3>Teta</h3>0 står for teta. Det symboliserer en vinkel. Her på tegningen viser den afbøjningsvinlen mellem nulte-ordensstrålen og første-ordensstrålen."
+        }, {
+            "labels_txt": "n",
+            "label_pos": [86, 38],
+            "info_txt": "<h3>N</h3>Bag et gitter, hvori der er ridset mange linjer ved siden af hinanden, vil der være forskellige retninger, hvori der hele tiden er konstruktiv interferens. Langs disse retninger vil lyset altså udbrede sig bag gitteret. Det er disse retninger, der svarer til strålerne af nulte, første, anden orden og så videre."
+        }]
 
     }, {
         "header": "Målinger",

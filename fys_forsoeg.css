@@ -58,5 +58,14 @@
 }
 
 .detalje_label{
-	position: absolute;
+	cursor: pointer;
+        position: absolute;
+    font-size: 250%;
+    color: rgba(5,160,168,1);
+}
+
+.microhint{
+    color: black;
+    box-shadow: none;
+    max-width: 60%;
 }
