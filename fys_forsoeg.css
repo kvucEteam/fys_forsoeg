@@ -1,5 +1,7 @@
 .btn-nav {
     position: relative;
+    margin-bottom: 20px;
+
 }
 
 .lockicon {
@@ -60,7 +62,7 @@
 .detalje_label{
 	cursor: pointer;
         position: absolute;
-    font-size: 250%;
+    font-size: 3.2vw;
     color: rgba(5,160,168,1);
 }
 
@@ -68,4 +70,12 @@
     color: black;
     box-shadow: none;
     max-width: 60%;
+}
+
+.btn_excel{
+    
+}
+
+#myAudio{
+    opacity: 0;
 }

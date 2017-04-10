@@ -2,20 +2,21 @@
     "slides": [{
         "header": "Introduktion og formål",
         "type": "html",
-        "html_content": "<h2>Introduktion til forsøget</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' id='iframe_vid' src='videoquizzer/mtubes.html'></iframe></div>",
+        "html_content": "<h2>Hvad handler denne øvelse om, og hvad er formålet med eksperimentet?</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' id='iframe_vid' src='videoquizzer/mtubes.html'></iframe></div>",
         "iframe_link": "",
-        "video_id": "d7GItSvdoZo"
+        "video_id": "Vi8WJIS7Z90"
 
     }, {
         "header": "Opstilling",
         "type": "html",
-        "html_content": "<h2>Introduktion til forsøget</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' id='iframe_vid' src='videoquizzer/mtubes2.html'></iframe></div>",
-        "iframe_link": ""
+        "html_content": "<h2>Hvordan stilles eksperimentet op?</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' id='iframe_vid' src='videoquizzer/mtubes2.html'></iframe></div>",
+        "iframe_link": "",
+        "video_id": "DiTti15RFdg"
 
     }, {
-        "header": "Interaktiv opstilling",
+        "header": "Info: Opstilling",
         "type": "html",
-        "html_content": "<h2>Interaktiv opstilling</h2><div class='bg_container bg_container_2'> <img src='img/laser_info_2.png' class='bg_image img-responsive' /> </div> ",
+        "html_content": "<h2>Info: Opstilling</h2><div class='bg_container bg_container_2'> <img src='img/laser_info_2.png' class='bg_image img-responsive' /> </div> ",
         "iframe_link": "",
         "labels": [{
             "labels_txt": "L",
@@ -34,17 +35,29 @@
     }, {
         "header": "Teori",
         "type": "html",
-        "html_content": "<h2>Teorien bag eksperimentet</h2>",
+        "html_content": "<h2>Hvilken teori skal benyttes i eksperimentet?</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' id='iframe_vid' src='videoquizzer/mtubes3.html'></iframe></div>",
         "iframe_link": ""
 
     }, {
-        "header": "Interaktiv teori repetition",
+        "header": "Info: Teori",
         "type": "html",
-        "html_content": "<h2>Interaktiv teori repetition</h2><div class='bg_container bg_container_4'> <img src='img/laser_info_3.png' class='bg_image img-responsive' /> </div> ",
+        "html_content": "<h2>Info: Teori</h2><div class='bg_container bg_container_4'> <img src='img/laser_info_3.png' class='bg_image img-responsive' /> </div> ",
         "iframe_link": "",
         "labels": [{
             "labels_txt": "L",
-            "label_pos": [63, 4],
+            "label_pos": [31, 27],
+            "info_txt": "<h3>Længde </h3>L står for længde. Du måler længden fra gitteret til væggen."
+        }, {
+            "labels_txt": "0",
+            "label_pos": [39, 76],
+            "info_txt": "<h3>Teta</h3>0 står for teta. Det symboliserer en vinkel. Her på tegningen viser den afbøjningsvinlen mellem nulte-ordensstrålen og første-ordensstrålen."
+        }, {
+            "labels_txt": "n",
+            "label_pos": [66, 5],
+            "info_txt": "<h3>N</h3>Bag et gitter, hvori der er ridset mange linjer ved siden af hinanden, vil der være forskellige retninger, hvori der hele tiden er konstruktiv interferens. Langs disse retninger vil lyset altså udbrede sig bag gitteret. Det er disse retninger, der svarer til strålerne af nulte, første, anden orden og så videre."
+        }, {
+            "labels_txt": "L",
+            "label_pos": [65, 42],
             "info_txt": "<h3>Længde </h3>L står for længde. Du måler længden fra gitteret til væggen."
         }, {
             "labels_txt": "0",
@@ -52,25 +65,25 @@
             "info_txt": "<h3>Teta</h3>0 står for teta. Det symboliserer en vinkel. Her på tegningen viser den afbøjningsvinlen mellem nulte-ordensstrålen og første-ordensstrålen."
         }, {
             "labels_txt": "n",
-            "label_pos": [86, 38],
+            "label_pos": [76, 72],
             "info_txt": "<h3>N</h3>Bag et gitter, hvori der er ridset mange linjer ved siden af hinanden, vil der være forskellige retninger, hvori der hele tiden er konstruktiv interferens. Langs disse retninger vil lyset altså udbrede sig bag gitteret. Det er disse retninger, der svarer til strålerne af nulte, første, anden orden og så videre."
         }]
 
     }, {
         "header": "Målinger",
         "type": "html",
-        "html_content": "<h2>Nu skal du foretage Målingerne</h2>",
+        "html_content": "<h2>Hvilke målinger foretages og hvordan?</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' id='iframe_vid' src='videoquizzer/mtubes4.html'></iframe></div>",
         "iframe_link": ""
 
     }, {
         "header": "Databehandling",
         "type": "iframe",
-        "html_content": "<h2>Databehandling - nu skal du bruge teorien</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' src='videoquizzer/step5.html'></iframe> </div></div>"
+        "html_content": "<h2>Hvordan udføres databehandlingen?</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' src='videoquizzer/step5.html'></iframe> </div></div>"
 
     }, {
         "header": "Konklusion",
         "type": "html",
-        "html_content": "<h3>Så var der content</h3>",
+        "html_content": "<h2>Hvad kan vi konkludere? </h2>",
         "iframe_link": ""
 
     }]

@@ -9,7 +9,7 @@ $(document).ready(function() {
     returnLastStudentSession();
     init();
 
-    $("#myAudio").hide();
+
 
 
 });
@@ -37,7 +37,7 @@ function init() {
     $(".main_container").html(contentHTML);
     $(".top_nav_container").html(navHTML);
 
-    $(".top_nav_container").append("<a href='data/data_boelge.xlsx'> <div class='btn btn-success btn_excel'>Download excel</div></a>");
+    $(".top_nav_container").append("<a href='data/data_boelge.xlsx'> <div class='btn btn-primary btn_excel'><span class='glyphicon glyphicon-download-alt'></span> Download Dataark </div></a>");
 
 
 
@@ -49,12 +49,8 @@ function init() {
 
     });
 
-    $(".slide_container").each(function() {
-        var indeks = $(this).index();
-        if (indeks > 0) {
-            $(this).fadeOut(0);
-        }
-    });
+    $(".slide_container").fadeOut(0);
+    $(".slide_container").eq(active_slide).fadeIn(100);
 
     /*====================================================
     =            Fjern hængelåse ved complete            =
@@ -62,8 +58,12 @@ function init() {
 
     for (var i = 0; i < complete_slides + 1; i++) {
         $(".glyphicons").eq(i).removeClass("glyphicons-lock").addClass("glyphicons-unlock");
-        $(".btn-nav").eq(active_slide).addClass("vuc-primary").removeClass("locked");
+        
     }
+    $(".btn-nav").eq(active_slide).addClass("vuc-info-active").removeClass("locked");
+
+    console.log("active_slide: " + active_slide);
+   
     /*=====  End of Fjern hængelåse ved complete  ======*/
 
 
@@ -98,7 +98,7 @@ function init() {
 
     //initVidQuiz(5);
 
-
+ clicked_nav($(".btn-nav").eq(active_slide));
 
 }
 
@@ -106,6 +106,7 @@ function init() {
 
 
 function clicked_nav(obj) {
+
 
     $(".microhint").remove();
 
@@ -129,8 +130,8 @@ function clicked_nav(obj) {
 
     $(".slide_container").eq(indeks).fadeIn(500);
 
-    $(".btn-nav").removeClass("vuc-primary");
-    $(".btn-nav").eq(indeks).addClass("vuc-primary");
+    $(".btn-nav").removeClass("vuc-info-active");
+    $(".btn-nav").eq(indeks).addClass("vuc-info-active");
     // }
 
     //$(".new_window_link").hide();
