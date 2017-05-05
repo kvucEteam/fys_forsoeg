@@ -1,7 +1,6 @@
 .btn-nav {
     position: relative;
     margin-bottom: 20px;
-
 }
 
 .lockicon {
@@ -16,7 +15,11 @@
 }
 
 .top_nav_container {
-    margin-bottom: 30px;
+    margin-bottom: -20px;
+}
+
+.slide_container {
+    margin-left: -15px;
 }
 
 .info_label,
@@ -24,7 +27,6 @@
     position: absolute;
     z-index: 10;
 }
-
 
 @media all and (max-width: 1170px) {
     .balance_detalje_label,
@@ -55,27 +57,45 @@
         font-size: 10px;
     }
 }
-.bg_container{
-	position: relative;
+
+.bg_container {
+    position: relative;
 }
 
-.detalje_label{
-	cursor: pointer;
-        position: absolute;
-    font-size: 3.2vw;
-    color: rgba(5,160,168,1);
+.detalje_label {
+    cursor: pointer;
+    position: absolute;
+    width: 3%;
+    margin-left: 0px;
 }
 
-.microhint{
+.microhint {
     color: black;
     box-shadow: none;
-    max-width: 60%;
+    max-width: 30%;
 }
 
-.btn_excel{
+.btn_excel {}
+
+#myAudio {
+    opacity: 0;
+}
+
+.header_glyph {
+    color: #999;
+    font-size: 18px;
+    margin-right: 6px;
+    margin-left: -14px;
+}
+
+.btn_text {
     
 }
 
-#myAudio{
-    opacity: 0;
+
+.glyphicon-info-sign{
+        top: 3px;
+    font-size: 15px;
+    left: 4px;
+    margin-right: 10px;
 }

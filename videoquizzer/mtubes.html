@@ -13,11 +13,11 @@
 </head>
 
 <body>
-    <div class="col-xs-12">
+    
         <div class="embed-responsive embed-responsive-16by9 col-xs-12 col-md-12">
             <div id="player" class="simpleplayer"> </div>
         </div>
-    </div>
+    
     <script>
     var tag = document.createElement('script');
 
@@ -52,11 +52,13 @@
 
                     console.log("PS: " + event.data);
                     if (event.data == YT.PlayerState.ENDED) {
-                        parent.slide_complete(1);
+                        parent.slide_complete(0);
                     }
                 }
             }
         });
+
+        player.setPlaybackQuality("highres");
     }
 
     function helloframe(){

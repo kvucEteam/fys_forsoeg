@@ -1,22 +1,22 @@
 [{
     "slides": [{
-        "header": "Introduktion og formål",
+        "header": "<span class='header_glyph glyphicon glyphicons glyphicons-play'></span>Introduktion og formål",
         "type": "html",
         "html_content": "<h2>Hvad handler denne øvelse om, og hvad er formålet med eksperimentet?</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' id='iframe_vid' src='videoquizzer/mtubes.html'></iframe></div>",
         "iframe_link": "",
         "video_id": "Vi8WJIS7Z90"
 
     }, {
-        "header": "Opstilling",
+        "header": "<span class='header_glyph glyphicon glyphicons glyphicons-play'></span> <span class='btn_text'>Opstilling</span>",
         "type": "html",
         "html_content": "<h2>Hvordan stilles eksperimentet op?</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' id='iframe_vid' src='videoquizzer/mtubes2.html'></iframe></div>",
         "iframe_link": "",
         "video_id": "DiTti15RFdg"
 
     }, {
-        "header": "Info: Opstilling",
+        "header": "<span class='header_glyph glyphicon glyphicon-info-sign'></span> Opstilling",
         "type": "html",
-        "html_content": "<h2>Info: Opstilling</h2><div class='bg_container bg_container_2'> <img src='img/laser_info_2.png' class='bg_image img-responsive' /> </div> ",
+        "html_content": "<h2>Informationstavle om opstillingen</h2><div class='bg_container bg_container_2'> <img src='img/laser_info_2.png' class='bg_image img-responsive' /> </div> ",
         "iframe_link": "",
         "labels": [{
             "labels_txt": "L",
@@ -33,55 +33,55 @@
         }]
 
     }, {
-        "header": "Teori",
+        "header": "<span class='header_glyph glyphicon glyphicons glyphicons-play'></span>Teori",
         "type": "html",
         "html_content": "<h2>Hvilken teori skal benyttes i eksperimentet?</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' id='iframe_vid' src='videoquizzer/mtubes3.html'></iframe></div>",
         "iframe_link": ""
 
     }, {
-        "header": "Info: Teori",
+        "header": "<span class='header_glyph glyphicon glyphicon-info-sign'></span> Teori",
         "type": "html",
-        "html_content": "<h2>Info: Teori</h2><div class='bg_container bg_container_4'> <img src='img/laser_info_3.png' class='bg_image img-responsive' /> </div> ",
+        "html_content": "<h2>Informationstavle om om teorien</h2><div class='bg_container bg_container_4'> <img src='img/laser_info_3.png' class='bg_image img-responsive' /> </div> ",
         "iframe_link": "",
         "labels": [{
             "labels_txt": "L",
-            "label_pos": [31, 27],
-            "info_txt": "<h3>Længde </h3>L står for længde. Du måler længden fra gitteret til væggen."
+            "label_pos": [66, 6.4],
+            "info_txt": "<h3>Længde </h3>L står for længde. L er længden mellem gitteret og væggen. <br/>Når L måles, er det vigtigt at sikre, at det er den vinkelrette afstand i på væggen, der måles. "
         }, {
-            "labels_txt": "0",
+            "labels_txt": "θ",
+            "label_pos": [68.5, 60.3],
+            "info_txt": "<h3>Teta</h3>θ er et græsk bogstav, som udtales “theta”. Det står for vinkel.<br/>Der er forskellige værdier af θ. Vi kalder dem θ<sub>1</sub>, θ<sub>2</sub>, θ<sub>3</sub> osv.<br/>θ<sub>1</sub> er vinklen mellem nulteordensstrålen og førsteordensstrålen. θ<sub>2</sub> er vinklen mellem nulteordensstrålen og andenordensstrålen. Og så videre."
+        }, {
+            "labels_txt": "n",
+            "label_pos": [85.4, 28.5],
+            "info_txt": "<h3>n</h3>n er ordenens nummer. Gitteret deler lyset op i forskellige stråler, som nummereres. <br/>Den midterste stråle har nummer 0. Den kaldes nulteordensstrålen. For denne stråle er n=0.<br/>Ved siden af nulteordensstrålen er der to førsteordensstråler. For begge disse stråler er n=1.<br/>Dernæst kommer to andenordensstråler med n=2 osv."
+        }, {
+            "labels_txt": "x",
+            "label_pos": [78, 53.6],
+            "info_txt": "<h3>x</h3>x er længden mellem nulteordensprikken og prikkerne af højere orden. Der er forskellige værdier af x. Vi kalder dem x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub> osv.<br/>x<sub>1</sub> er altså afstanden mellem nulteordensprikken og førsteordensprikken. x<sub>2</sub> er afstanden mellem nulteordensprikken og andenordensprikken osv."
+        }, {
+            "labels_txt": "λ",
+            "label_pos": [31, 27.2],
+            "info_txt": "<h3>Lambda</h3>λ er et græsk bogstav, som udtales “lambda”. Det står for bølgelængde. <br/>Bølgelængden er afstanden mellem to bølgetoppe (eller to bølgedale). <br/>Synligt lys har meget små bølgelængder, som ligger i området ca. 400-700 nanometer. Det er bølgelængden, der bestemmer lysets farve."
+        }, {
+            "labels_txt": "d",
             "label_pos": [39, 76],
-            "info_txt": "<h3>Teta</h3>0 står for teta. Det symboliserer en vinkel. Her på tegningen viser den afbøjningsvinlen mellem nulte-ordensstrålen og første-ordensstrålen."
-        }, {
-            "labels_txt": "n",
-            "label_pos": [66, 5],
-            "info_txt": "<h3>N</h3>Bag et gitter, hvori der er ridset mange linjer ved siden af hinanden, vil der være forskellige retninger, hvori der hele tiden er konstruktiv interferens. Langs disse retninger vil lyset altså udbrede sig bag gitteret. Det er disse retninger, der svarer til strålerne af nulte, første, anden orden og så videre."
-        }, {
-            "labels_txt": "L",
-            "label_pos": [65, 42],
-            "info_txt": "<h3>Længde </h3>L står for længde. Du måler længden fra gitteret til væggen."
-        }, {
-            "labels_txt": "0",
-            "label_pos": [71, 54],
-            "info_txt": "<h3>Teta</h3>0 står for teta. Det symboliserer en vinkel. Her på tegningen viser den afbøjningsvinlen mellem nulte-ordensstrålen og første-ordensstrålen."
-        }, {
-            "labels_txt": "n",
-            "label_pos": [76, 72],
-            "info_txt": "<h3>N</h3>Bag et gitter, hvori der er ridset mange linjer ved siden af hinanden, vil der være forskellige retninger, hvori der hele tiden er konstruktiv interferens. Langs disse retninger vil lyset altså udbrede sig bag gitteret. Det er disse retninger, der svarer til strålerne af nulte, første, anden orden og så videre."
+            "info_txt": "<h3>Gitterkonstanten</h3>d står for gitterkonstanten. Gitterkonstanten fortæller noget om det optiske gitters konstruktion. Gitteret er en glasplade med tusindvis af fine spalter ridset i. Gitterkonstanten angiver afstanden mellem to nabospalter. <br/>Gitterkonstanten er en meget lille afstand. Den ligger typisk i størrelsesordenen nogle få mikrometer."
         }]
 
     }, {
-        "header": "Målinger",
+        "header": "<span class='header_glyph glyphicon glyphicons glyphicons-play'></span>Målinger",
         "type": "html",
         "html_content": "<h2>Hvilke målinger foretages og hvordan?</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' id='iframe_vid' src='videoquizzer/mtubes4.html'></iframe></div>",
         "iframe_link": ""
 
     }, {
-        "header": "Databehandling",
+        "header": "<span class='header_glyph glyphicon glyphicons glyphicons-play'></span>Databehandling",
         "type": "iframe",
         "html_content": "<h2>Hvordan udføres databehandlingen?</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' src='videoquizzer/step5.html'></iframe> </div></div>"
 
     }, {
-        "header": "Konklusion",
+        "header": "<span class='header_glyph glyphicon glyphicons glyphicons-play'></span>Konklusion",
         "type": "html",
         "html_content": "<h2>Hvad kan vi konkludere? </h2>",
         "iframe_link": ""

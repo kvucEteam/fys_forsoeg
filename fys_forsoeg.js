@@ -6,14 +6,13 @@ var saveArray = [];
 var audio = document.getElementById("myAudio");
 
 $(document).ready(function() {
+    console.log("HI!");
+
     returnLastStudentSession();
     init();
 
 
-
-
 });
-
 
 /*=============================================
 =            Lav navigation og generelle funktioner            =
@@ -37,10 +36,12 @@ function init() {
     $(".main_container").html(contentHTML);
     $(".top_nav_container").html(navHTML);
 
-    $(".top_nav_container").append("<a href='data/data_boelge.xlsx'> <div class='btn btn-primary btn_excel'><span class='glyphicon glyphicon-download-alt'></span> Download Dataark </div></a>");
+    $(".top_nav_container").append("<br/><a href='data/data_bolgelaengde.xlsx'> <div class='btn btn-primary btn_excel'><span class='glyphicon glyphicon-download-alt'></span> Download Dataark </div></a>");
+    $(".top_nav_container").append("<a href='data/bolgelaengderapport.docx'> <div class='btn btn-primary btn_word'><span class='glyphicon glyphicon-download-alt'></span> Download Wordskabelon </div></a>");
 
 
-
+    $(".btn_excel").fadeOut(0);
+    $(".btn_word").fadeOut(0);
 
 
     $(".btn-nav").click(function() {
@@ -49,7 +50,7 @@ function init() {
 
     });
 
-    $(".slide_container").fadeOut(0);
+    $(".slide_container").hide(0);
     $(".slide_container").eq(active_slide).fadeIn(100);
 
     /*====================================================
@@ -57,13 +58,14 @@ function init() {
     ====================================================*/
 
     for (var i = 0; i < complete_slides + 1; i++) {
-        $(".glyphicons").eq(i).removeClass("glyphicons-lock").addClass("glyphicons-unlock");
-        
+        $(".glyphicons").eq(i).removeClass("glyphicons-lock");
+        $(".lockicon").eq(i).remove();
+
     }
     $(".btn-nav").eq(active_slide).addClass("vuc-info-active").removeClass("locked");
 
     console.log("active_slide: " + active_slide);
-   
+
     /*=====  End of Fjern hængelåse ved complete  ======*/
 
 
@@ -72,7 +74,7 @@ function init() {
         var element = jsonSlides[2].labels[i];
         console.log(i + " punkt");
         //viewArray[state].append("<div><img class='gif' src=" + element.pics[state] + "></div>");
-        $(".bg_container_2").append("<span class='detalje_label detalje_label_2 glyphicon glyphicon-info-sign'></span>");
+        $(".bg_container_2").append("<span class='detalje_label detalje_label_2'><img class='img-responsive' src='img/ikoninfo.png'></span>"); //glyphicon glyphicon-info-sign
         $(".detalje_label_2").eq(i).css("left", element.label_pos[0] + "%").css("top", element.label_pos[1] + "%")
             //$(".gif").eq(i).css("left", element.balance_pos[0] + "%").css("top", element.balance_pos[1] + "%");
     }
@@ -81,24 +83,35 @@ function init() {
         var element = jsonSlides[4].labels[i];
         console.log(i + " punkt");
         //viewArray[state].append("<div><img class='gif' src=" + element.pics[state] + "></div>");
-        $(".bg_container_4").append("<span class='detalje_label detalje_label_4 glyphicon glyphicon-info-sign'></span>");
+        $(".bg_container_4").append("<span class='detalje_label detalje_label_4'><img class='img-responsive' src='img/ikoninfo.png'></span>");
         $(".detalje_label_4").eq(i).css("left", element.label_pos[0] + "%").css("top", element.label_pos[1] + "%")
             //$(".gif").eq(i).css("left", element.balance_pos[0] + "%").css("top", element.balance_pos[1] + "%");
     }
 
     $(".detalje_label_2").click(function() {
+        slide_complete(2);
+        $(".microhint").remove();
         var indeks = $(this).index() - 1;
         microhint($(this), jsonSlides[2].labels[indeks].info_txt, "white");
+        $(".microhint").click(function() {
+            $(this).remove();
+        });
     });
 
     $(".detalje_label_4").click(function() {
+        console.log("SCP!");
+        slide_complete(4);
+        $(".microhint").remove();
         var indeks = $(this).index() - 1;
         microhint($(this), jsonSlides[4].labels[indeks].info_txt, "white");
+        $(".microhint").click(function() {
+            $(this).remove();
+        });
     });
 
     //initVidQuiz(5);
 
- clicked_nav($(".btn-nav").eq(active_slide));
+    clicked_nav($(".btn-nav").eq(active_slide));
 
 }
 
@@ -114,7 +127,7 @@ function clicked_nav(obj) {
 
     initSimplePlayer(0);
     var indeks = obj.index();
-    console.log(indeks);
+    console.log("Active slide: " + indeks);
 
     active_slide = indeks;
 
@@ -136,6 +149,17 @@ function clicked_nav(obj) {
 
     //$(".new_window_link").hide();
     saveData();
+
+    if (active_slide == 6) {
+        $(".btn_excel").fadeIn(200);
+    } else {
+        $(".btn_excel").fadeOut(0);
+    }
+    if (active_slide == 7) {
+        $(".btn_word").fadeIn(200);
+    } else {
+        $(".btn_word").fadeOut(0);
+    }
 }
 
 function initSimplePlayer(num) {
@@ -151,16 +175,17 @@ function slide_complete(comp_num) {
     }
 
     //$(".btn-nav").eq(active_slide+1).removeClass("locked"); 
-    $(".glyphicons").eq(active_slide + 1).removeClass("glyphicons-lock").addClass("glyphicons-unlock");
-    $(".btn-nav").eq(active_slide + 1).removeClass("locked");
+    $(".lockicon").eq(comp_num).fadeOut(500);
+    //$(".glyphicons").eq(active_slide).removeClass("glyphicons-lock").addClass("glyphicons-unlock");
+    //$(".btn-nav").eq(active_slide + 1).removeClass("locked");
     saveData();
 
-    audio.play();
+    //audio.play();
 }
 
 function returnLastStudentSession() {
     window.osc = Object.create(objectStorageClass);
-    osc.init('student_test_sesfdhsio14');
+    osc.init('student_forsoeg_test10');
     osc.exist('jsonData');
 
     var TjsonData = osc.load('jsonData');

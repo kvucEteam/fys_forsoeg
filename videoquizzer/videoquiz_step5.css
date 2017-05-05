@@ -79,11 +79,6 @@
     height: 100%;
 }
 
-img {
-    cursor: pointer;
-    margin-left: 15px;
-    position: relative;
-}
 
 td {
     margin: 3px;

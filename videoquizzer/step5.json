@@ -1,5 +1,5 @@
 [{
-        "video": "szfLBEN6CVI"
+        "video": "YbX2VBFs828"
     },
 
     {
@@ -19,7 +19,7 @@
             "timestamp": 3,
             "events": [{
                 "eventtype": "nav_stop",
-                "tekst": "Hvad har du brug for nu?",
+                "tekst": "Hent og åbn Excel-filen. Find papir, blyant og lommeregner frem.",
 
                 "svar": [
                     "Brug for et hint?",
