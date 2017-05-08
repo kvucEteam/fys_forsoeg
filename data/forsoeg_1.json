@@ -14,7 +14,7 @@
         "video_id": "DiTti15RFdg"
 
     }, {
-        "header": "<span class='header_glyph glyphicon glyphicon-info-sign'></span> Opstilling",
+        "header": "<span class='header_glyph glyphicon glyphicon-info-sign'></span>Opstilling",
         "type": "html",
         "html_content": "<h2>Informationstavle om opstillingen</h2><div class='bg_container bg_container_2'> <img src='img/laser_info_2.png' class='bg_image img-responsive' /> </div> ",
         "iframe_link": "",

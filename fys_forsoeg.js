@@ -50,7 +50,11 @@ function init() {
 
     });
 
-    $(".slide_container").hide(0);
+
+
+
+
+    $(".slide_container").hide();
     $(".slide_container").eq(active_slide).fadeIn(100);
 
     /*====================================================
@@ -120,10 +124,14 @@ function init() {
 
 function clicked_nav(obj) {
 
+    //document.getElementById('FrameID').contentWindow.location.reload(true);
+
 
     $(".microhint").remove();
 
-    document.getElementById('iframe_vid').contentWindow.helloframe();
+    //document.getElementById('iframe_vid').contentWindow.helloframe();
+
+    //document.getElementById('iframe_vid').contentWindow.location.reload(true);
 
     initSimplePlayer(0);
     var indeks = obj.index();
@@ -142,6 +150,10 @@ function clicked_nav(obj) {
     })
 
     $(".slide_container").eq(indeks).fadeIn(500);
+
+    $(".ytp-thumbnail-overlay-image").hide();
+
+    //console.log("URL:  " + urlen);
 
     $(".btn-nav").removeClass("vuc-info-active");
     $(".btn-nav").eq(indeks).addClass("vuc-info-active");
@@ -185,7 +197,7 @@ function slide_complete(comp_num) {
 
 function returnLastStudentSession() {
     window.osc = Object.create(objectStorageClass);
-    osc.init('student_forsoeg_test10');
+    osc.init('student_forsoeg_test11');
     osc.exist('jsonData');
 
     var TjsonData = osc.load('jsonData');
