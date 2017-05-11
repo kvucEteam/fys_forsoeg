@@ -30,7 +30,7 @@ function init() {
         contentHTML += "<div class='slide_container content_" + i + "'> " + jsonSlides[i].html_content + "</div>";
     }
 
-    //console.log("complete_slides: " + complete_slides);
+    //console.log("complete_slides: " + complete_slides); 
 
 
     $(".main_container").html(contentHTML);
