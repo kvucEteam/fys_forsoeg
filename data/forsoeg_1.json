@@ -83,7 +83,7 @@
     }, {
         "header": "<span class='header_glyph glyphicon glyphicons glyphicons-play'></span>Konklusion",
         "type": "html",
-        "html_content": "<h2>Hvad kan vi konkludere? </h2>",
+        "html_content": "<h2>Hvad kan vi konkludere?</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' src='videoquizzer/step6.html'></iframe> </div></div>",
         "iframe_link": ""
 
     }]

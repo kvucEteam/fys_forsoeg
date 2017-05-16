@@ -55,9 +55,7 @@
 
 
 .introknap,
-.btn_videre,
-.videre_knap,
-.forfra_knap {
+.videre_knap {
     
     color:white;
 }
@@ -72,7 +70,7 @@
     left: 0;
     /* margin: 0 auto; */
     position: absolute;
-    left: 70%;
+    left: 60%;
     top: 2%;
     width: 30%;
     z-index: 100;
@@ -127,6 +125,8 @@ td {
     white-space: normal !important;
     font-size: 1.3vw;
     padding: 4px 16px 4px 15px;
+    width: 100%;
+    text-align: left;
 }
 
 .btn_chosen {
@@ -155,6 +155,7 @@ table {
 .btn_videre {
     position: absolute;
     bottom: 0;
+        font-size: 1.6vw;
 }
 
 .videre_knap {}
@@ -189,20 +190,25 @@ table {
     height: 75%;
     overflow-y: auto;
     overflow-x: hidden;
-    margin-top: 60%;
+    margin-top: 0%;
 }
 
 .svar_btn{
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.6vw;
     padding: 12px;
+    width: 100%;
 }
 
 .hint{
     position: absolute;
     left:20%;
     top:20%;
+    font-size: 2vw;
+}
+
+.spm_tekst{
     font-size: 2vw;
 }
 

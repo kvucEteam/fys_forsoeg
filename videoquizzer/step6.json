@@ -1,5 +1,5 @@
 [{
-        "video": "YbX2VBFs828"
+        "video": "M9C389_m5jA"
     },
 
     {
@@ -7,7 +7,7 @@
     },
 
     {
-        "intro_text": "Du skal gennemgå tre film, som beskriver databehandlingen."
+        "intro_text": "Du skal arbejde med konklusionen nu."
     },
 
     {
@@ -16,90 +16,86 @@
 
     {
         "stops": [{
-            "timestamp": 39,
+            "timestamp": 67,
             "events": [{
                 "eventtype": "nav_stop",
-                "tekst": "Hent og åbn Excel-filen. Find papir, blyant og lommeregner frem.",
+                "tekst": "Hvad vil du nu?",
 
                 "svar": [
-                    "Er du klar?"
+                    "Se udregning", 
+                    "Se resultat", 
+                    "Gå til repetitionsquiz"
 
                 ],
                 "timestamps": [
-                    "3",
-                    "25"
+                    "118",
+                    "149"
 
                 ],
                 "hint": "Her er et hint der muligvis kommer i LateX eller noget andet sjovt."
             }]
         }, {
-            "timestamp": 47,
-            "events": [{
-                "eventtype": "nav_stop",
-                "tekst": "Beregn gitterkonstanten ud fra antallet af spalter pr. mm. Husk at omregne til nanometer.",
-                "svar": [
-                    "Se udregning",
-                    "Se løsning",
-                    "Gå til næste regnestykke"
-                ],
-                "timestamps": [
-                    "79",
-                    "86"
-
-                ],
-                "hint": "Her er et hint der muligvis kommer i LateX eller noget andet sjovt."
-            }]
-        }, {
-            "timestamp": 96,
-            "events": [{
-                "eventtype": "nav_stop",
-                "tekst": "For hver værdi af x_n skal du nu beregne den tilhørende afbøjningsvinkel, theta_n.",
-                "svar": [
-                    "Se udregning",
-                    "Se løsning",
-                    "Gå til næste regnestykke"
-                ],
-                "timestamps": [
-                    "174",
-                    "180"
-
-                ],
-                "feedback": "Det var heldigt. Klik på knappen herunder for at fortsætte."
-            }]
-
-        }, {
-            "timestamp": 193,
+            "timestamp": 150,
             "events": [{
                 "eventtype": "svarknap",
-                "tekst": "For hver afbøjningsvinkel skal du beregne bølgelængden ud fra gitterligningen. Angiv bølgelængden i nanometer.",
+                "tekst": "Hvad er formålet med eksperimentet?",
                 "svar": [
-                    "Se udregning",
-                    "Se løsning",
-                    "Gå til næste regnestykke"
-
+                    "At bestemme gitterkonstanten for et optisk gitter","At bestemme bølgelængden for laserlys","At bestemme hastigheden for laserlys"
                 ],
-                "timestamps": [
-                    "278",
-                    "287"
-
+                "korrekt": [
+                    "1"
                 ],
-                "feedback": "Historikere bruger kilder til at underbygge deres beskrivelser af fortiden."
-            }]
-        }, {
-            "timestamp": 297,
-            "events": [{
+                "feedback": "Hvad er formålet med eksperimentet?"
+            },{
                 "eventtype": "svarknap",
-                "tekst": "Tag til sidst gennemsnittet af de bølgelængder, du har beregnet.",
+                "tekst": "Hvad siger gitterligningen?",
                 "svar": [
-                    "Se udregning",
-                    "Se løsning"
-
+                    "n &#9679 λ = d &#9679 sin(Өn)","n &#9679 d = λ &#9679 sin(Өn)","λ &#9679 d = n &#9679 sin(Өn)"
                 ],
-                "timestamps": [
-                    "340"
-
+                "korrekt": [
+                    "0"
                 ],
-                "feedback": "Historikere bruger kilder til at underbygge deres beskrivelser af fortiden."
+                "feedback": "Hvad siger gitterligningen?"
+            },{
+                "eventtype": "svarknap",
+                "tekst": "Hvad angiver ordenen i dette eksperiment?",
+                "svar": [
+                    "Laserens styrke", "Antal spalter pr. mm i gitteret", "Nummeret på en af de afbøjede lysstråler"
+                ],
+                "korrekt": [
+                    "2"
+                ],
+                "feedback": "Hvad angiver ordenen i dette eksperiment?"
+            },{
+                "eventtype": "svarknap",
+                "tekst": "Hvad angiver gitterkonstanten?",
+                "svar": [
+                    "Antal spalter pr. mm i gitteret","Afstanden mellem to spalter i gitteret","Antallet af spalter i gitteret"
+                ],
+                "korrekt": [
+                    "1"
+                ],
+                "feedback": "Hvad angiver gitterkonstanten?"
+            },{
+                "eventtype": "svarknap",
+                "tekst": "Hvad er en realistisk bølgelængde for en grøn laser?",
+                "svar": [
+                    "458 nm","532 nm","650 nm"
+                ],
+                "korrekt": [
+                    "1"
+                ],
+                "feedback": "Hvad er en realistisk bølgelængde for en grøn laser?"
+            },{
+                "eventtype": "svarknap",
+                "tekst": "For et optisk gitter er d = 0.01 mm. <br/>Dette betyder, at der er…",
+                "svar": [
+                    "100 spalter pr. mm","1000 spalter pr. mm","100 000 spalter pr. mm"
+                ],
+                "korrekt": [
+                    "0"
+                ],
+                "feedback": "For et optisk gitter er d = 0.01 mm.<br/>Dette betyder, at der er…"
             }]
         }]
     }
