@@ -15,7 +15,7 @@
 <body>
     
         <div class="embed-responsive embed-responsive-16by9 col-xs-12 col-md-12">
-            <div id="player"></div>
+            <div id="player" class="simpleplayer"> </div>
         </div>
     
     <script>
@@ -27,9 +27,9 @@
 
     var player;
 
-       function onYouTubePlayerAPIReady() {
+    function onYouTubePlayerAPIReady() {
         player = new YT.Player('player', {
-            videoId: 'WG-lbksr2Ks',
+            videoId: '7JXctspLDnA',
             playerVars: {
                 'id': 'ytPlayer',
                 'enablejsapi': 1,
@@ -52,14 +52,16 @@
 
                     console.log("PS: " + event.data);
                     if (event.data == YT.PlayerState.ENDED) {
-                        parent.slide_complete(4);
+                        parent.slide_complete(1);
                     }
                 }
             }
         });
     }
 
-
+    function helloframe(){
+        //alert ("hello!");
+    }
     </script>
     <script src="../../library/vendor_scripts.js"></script>
     <script src="../../library/custom_scripts.js"></script>

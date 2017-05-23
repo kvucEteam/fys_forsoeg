@@ -50,7 +50,7 @@
                 "eventtype": "svarknap",
                 "tekst": "Hvad siger gitterligningen?",
                 "svar": [
-                    "<b>n &#9679 λ = d &#9679 sin(Өn)</b>","<b>n &#9679 d = λ &#9679 sin(Өn)</b>","<b>λ &#9679 d = n &#9679 sin(Өn)</b>"
+                    "n &#9679 λ = d &#9679 sin(Өn)","n &#9679 d = λ &#9679 sin(Өn)","λ &#9679 d = n &#9679 sin(Өn)"
                 ],
                 "korrekt": [
                     "0"

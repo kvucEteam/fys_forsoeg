@@ -2,11 +2,15 @@ var jsonSlides;
 var complete_slides = 0;
 var active_slide = 0;
 var saveArray = [];
+var opgavenummer; 
 
 var audio = document.getElementById("myAudio");
 
 $(document).ready(function() {
-    console.log("HI!");
+
+    $(".new_window_link").css("opacity","0");
+
+opgavenummer = window.location.href.substring(window.location.href.length-5, window.location.href.length-6);
 
 
     init();
@@ -26,8 +30,8 @@ function init() {
 
 
     for (var i = 0; i < jsonSlides.length; i++) {
-        //navHTML += "<div class='btn btn-info btn-nav locked'>" + jsonSlides[i].header + "<div class='lockicon'><span class='glyphicons glyphicons-lock'></span></div></div>";
-    navHTML += "<div class='btn btn-info btn-nav locked'>" + jsonSlides[i].header + "</div>";
+        navHTML += "<div class='btn btn-info btn-nav locked'>" + jsonSlides[i].header + "<div class='lockicon'><span class='glyphicons glyphicons-lock'></span></div></div>";
+    //navHTML += "<div class='btn btn-info btn-nav locked'>" + jsonSlides[i].header + "</div>";
     }
 
     //console.log("complete_slides: " + complete_slides); 
@@ -36,7 +40,7 @@ function init() {
 
     $(".top_nav_container").html(navHTML);
 
-    $(".top_nav_container").append("<br/><a href='data/data_bolgelaengde.xlsx'> <div class='btn btn-primary btn_excel'><span class='glyphicon glyphicon-download-alt'></span> Download Dataark </div></a>");
+    $(".top_nav_container").append("<br/><a href='data/data_bolgelaengde.xlsx'> <div class='btn btn-primary btn_excel'><span class='glyphicon glyphicon-download-alt'></span> Download Excelark </div></a>");
     $(".top_nav_container").append("<a href='data/bolgelaengderapport.docx'> <div class='btn btn-primary btn_word'><span class='glyphicon glyphicon-download-alt'></span> Download Wordskabelon </div></a>");
 
 
@@ -100,10 +104,11 @@ function clicked_nav(obj) {
 
     console.log("AS: " + active_slide);
 
-    //if (obj.hasClass("locked")) {
+    if (obj.hasClass("locked")) {
         //console.log("Se filmen før du går videre");
         //microhint(obj, "Se filmen før du går videre");
-    //} else {
+        microhint($(".btn-nav").eq(complete_slides), "Du skal først være færdig med denne fane, før du kan gå videre.");
+    } else {
 
         var contentHTML = "";
         contentHTML += "<div class='slide_container content_" + indeks + "'> " + jsonSlides[indeks].html_content + "</div>";
@@ -116,7 +121,7 @@ function clicked_nav(obj) {
 
         $(".btn-nav").removeClass("vuc-info-active");
         $(".btn-nav").eq(indeks).addClass("vuc-info-active");
-    //}
+    }
 
     //$(".new_window_link").hide();
     saveData();
@@ -132,7 +137,7 @@ function clicked_nav(obj) {
         $(".btn_word").fadeOut(0);
     }
 
-    if (active_slide == 2) {
+    if (active_slide == 2 && opgavenummer == 1) {
 
         for (var i = 0; i < jsonSlides[2].labels.length; i++) {
             var element = jsonSlides[2].labels[i];
@@ -144,7 +149,7 @@ function clicked_nav(obj) {
         }
     }
 
-    if (active_slide == 4) {
+    if (active_slide == 4 && opgavenummer == 1) {
         for (var i = 0; i < jsonSlides[4].labels.length; i++) {
             var element = jsonSlides[4].labels[i];
             console.log(i + " punkt");
@@ -155,8 +160,20 @@ function clicked_nav(obj) {
         }
     }
 
+        if (active_slide == 3 && opgavenummer == 2) {
+            
+        for (var i = 0; i < jsonSlides[3].labels.length; i++) {
+            var element = jsonSlides[3].labels[i];
+            console.log(i + " punkt");
+            //viewArray[state].append("<div><img class='gif' src=" + element.pics[state] + "></div>");
+            $(".bg_container_4").append("<span class='detalje_label detalje_label_3'><img class='img-responsive' src='img/ikoninfo.png'><span class='info_byline'>"+element.labels_txt+"</span></span>");
+            $(".detalje_label_3").eq(i).css("left", element.label_pos[0] + "%").css("top", element.label_pos[1] + "%")
+                //$(".gif").eq(i).css("left", element.balance_pos[0] + "%").css("top", element.balance_pos[1] + "%");
+        }
+    }
+
     $(".detalje_label_2").click(function() {
-        slide_complete(2);
+        slide_complete(3);
         $(".microhint").remove();
         var indeks = $(this).index() - 1;
         microhint($(this), jsonSlides[2].labels[indeks].info_txt);
@@ -165,9 +182,19 @@ function clicked_nav(obj) {
         });
     });
 
+        $(".detalje_label_3").click(function() {
+        slide_complete(4);
+        $(".microhint").remove();
+        var indeks = $(this).index() - 1;
+        microhint($(this), jsonSlides[3].labels[indeks].info_txt);
+        $(".microhint").click(function() {
+            $(this).remove();
+        });
+    });
+
     $(".detalje_label_4").click(function() {
         console.log("SCP!");
-        slide_complete(4);
+        slide_complete(5);
         $(".microhint").remove();
         var indeks = $(this).index() - 1;
         microhint($(this), jsonSlides[4].labels[indeks].info_txt);
@@ -184,13 +211,15 @@ function initSimplePlayer(num) {
 
 function slide_complete(comp_num) {
 
+    console.log($(".lockicon").length + ", " + $(".btn-nav").length);
+
     console.log("complete: " + comp_num);
     if (comp_num > complete_slides) {
         complete_slides = comp_num;
     }
 
     $(".btn-nav").eq(comp_num).removeClass("locked");
-    $(".lockicon").eq(comp_num).fadeOut(500);
+    $(".btn-nav").eq(comp_num).find(".lockicon").fadeOut(500);
     //$(".glyphicons").eq(active_slide).removeClass("glyphicons-lock").addClass("glyphicons-unlock");
     //$(".btn-nav").eq(active_slide + 1).removeClass("locked");
     saveData();
@@ -200,7 +229,13 @@ function slide_complete(comp_num) {
 
 function returnLastStudentSession() {
     window.osc = Object.create(objectStorageClass);
-    osc.init('student_forsoeg_test14');
+
+    if (opgavenummer == 1){
+        osc.init('student_forsoeg_opg_b1');
+    } else if (opgavenummer == 2){
+        osc.init('student_forsoeg_opg_2_b3');
+    }
+    
     osc.exist('jsonData');
 
     var TjsonData = osc.load('jsonData');
@@ -218,7 +253,7 @@ function returnLastStudentSession() {
         console.log("this_index:");
         if ($(this).index() <= complete_slides) {
             $(this).removeClass("locked");
-            $(".lockicon").eq(indeks).fadeOut(500);
+            $(".lockicon").eq(indeks).fadeOut(0);
         }
 
     });

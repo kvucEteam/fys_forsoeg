@@ -1,3 +1,4 @@
+
 .btn-nav {
     position: relative;
     margin-bottom: 20px;
@@ -87,14 +88,26 @@
     margin-left: -5px;
 }
 
-.btn_text {
-    
-}
+.btn_text {}
 
-
-.glyphicon-info-sign{
-        top: 3px;
+.glyphicon-info-sign {
+    top: 3px;
     font-size: 15px;
     left: 4px;
     margin-right: 10px;
 }
+
+.label_header {
+    margin-top: 5px;
+}
+
+.info_byline {
+  color: white;
+    top: 7%;
+    position: absolute;
+    left: 132%;
+    font-size: 1.4vw;
+    width: 150px;
+}
+
+

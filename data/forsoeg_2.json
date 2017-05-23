@@ -1,0 +1,91 @@
+[{
+    "slides": [{
+        "header": "<span class='header_glyph glyphicon glyphicons glyphicons-play'></span>Introduktion og formål",
+        "type": "html",
+        "html_content": "<h2>Hvad handler denne øvelse om, og hvad er formålet med eksperimentet?</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' id='iframe_vid' src='videoquizzer/mtubes_b.html'></iframe></div>",
+        "iframe_link": "",
+        "video_id": "Vi8WJIS7Z90"
+
+    }, {
+        "header": "<span class='header_glyph glyphicon glyphicons glyphicons-play'></span> <span class='btn_text'>Opstilling</span>",
+        "type": "html",
+        "html_content": "<h2>Hvordan stilles eksperimentet op?</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' id='iframe_vid' src='videoquizzer/mtubes_b2.html'></iframe></div>",
+        "iframe_link": "",
+        "video_id": "DiTti15RFdg"
+
+    }, {
+        "header": "<span class='header_glyph glyphicon glyphicons glyphicons-play'></span><span class='btn_text'>Teori</span>",
+        "type": "html",
+        "html_content": "<h2>Hvilken teori skal benyttes i eksperimentet?</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' id='iframe_vid' src='videoquizzer/mtubes3.html'></iframe></div>",
+        "iframe_link": ""
+
+    }, {
+        "header": "<span class='header_glyph glyphicon glyphicon-info-sign'></span> <span class='btn_text'>Teori</span>",
+        "type": "html",
+        "html_content": "<h2>Informationstavle om teorien</h2><div class='bg_container bg_container_4'> <img src='img/TAVLE_varmefylde.jpg' class='bg_image img-responsive' /> </div> ",
+        "iframe_link": "",
+        "labels": [{
+            "labels_txt": "m<sub>metal</sub>",
+            "label_pos": [66, 8],
+            "info_txt": "<h3 class='label_header'>m<sub>metal</sub></h3>Massen af metalloddet."
+        }, {
+            "labels_txt": "Vand",
+            "label_pos": [66, 16],
+            "info_txt": "<h3 class='label_header'>m<sub>vand</sub></h3>Massen af vandet i bægeret"
+        }, {
+            "labels_txt": "T<sub>metal1</sub>",
+            "label_pos": [66, 24],
+            "info_txt": "<h3 class='label_header'>T<sub>metal, 1</sub></h3>Metalloddets starttemperatur. Den bør være 100 grader Celsius. "
+        }, {
+            "labels_txt": "T<sub>vand, 1</sub>",
+            "label_pos": [66, 32],
+            "info_txt": "<h3 class='label_header'>T<sub>vand, 1</sub></h3>Vandets starttemperatur"
+        }, {
+            "labels_txt": "T<sub>metal, 2</sub>",
+            "label_pos": [66, 40],
+            "info_txt": "<h3 class='label_header'>T<sub>metal, 2</sub></h3>Metalloddets sluttemperatur. Det er den samme som vandets sluttemperatur."
+        }, {
+            "labels_txt": "T<sub>vand, 2</sub>",
+            "label_pos": [66, 48],
+            "info_txt": "<h3 class='label_header'>T<sub>vand, 2</sub></h3>Vandets sluttemperatur. Det er den samme som loddets sluttemperatur."
+        }, {
+            "labels_txt": "∆T<sub>metal</sub>",
+            "label_pos": [66, 56],
+            "info_txt": "<h3 class='label_header'>∆T<sub>metal</sub></h3>Temperaturændringen for metallet. Delta-notationen dækker altid over slut- minus startværdi."
+        }, {
+            "labels_txt": "∆T<sub>vand</sub>",
+            "label_pos": [66, 64],
+            "info_txt": "<h3 class='label_header'>∆T<sub>vand</sub></h3>Temperaturændringen for vandet. Delta-notationen dækker altid over slut- minus startværdi."
+        }, {
+            "labels_txt": "∆E<sub>metal",
+            "label_pos": [66, 72],
+            "info_txt": "<h3 class='label_header'>∆E<sub>metal</sub></h3>Tilvæksten i metalloddets energi. Delta-notationen dækker altid over slut- minus startværdi."
+        }, {
+            "labels_txt": "∆E<sub>vand</sub>",
+            "label_pos": [66, 80],
+            "info_txt": "<h3 class='label_header'>∆E<sub>vand</sub></h3>Tilvæksten i vandets energi. Delta-notationen dækker altid over slut- minus startværdi."
+        }, {
+            "labels_txt": "∆E<sub>system</sub>",
+            "label_pos": [40, 29],
+            "info_txt": "<h3 class='label_header'>∆E<sub>system</sub></h3>Tilvæksten i hele systemets energi (vand i bæger + metallod). Delta-notationen dækker altid over slut- minus startværdi."
+        }]
+
+    }, {
+        "header": "<span class='header_glyph glyphicon glyphicons glyphicons-play'></span>Målinger",
+        "type": "html",
+        "html_content": "<h2>Hvilke målinger foretages og hvordan?</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' id='iframe_vid' src='videoquizzer/mtubes_b4.html'></iframe></div>",
+        "iframe_link": ""
+
+    }, {
+        "header": "<span class='header_glyph glyphicon glyphicons glyphicons-play'></span>Databehandling",
+        "type": "iframe",
+        "html_content": "<h2>Hvordan udføres databehandlingen?</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' src='videoquizzer/step5.html'></iframe> </div></div>"
+
+    }, {
+        "header": "<span class='header_glyph glyphicon glyphicons glyphicons-play'></span>Konklusion",
+        "type": "html",
+        "html_content": "<h2>Hvad kan vi konkludere?</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' src='videoquizzer/step6.html'></iframe> </div></div>",
+        "iframe_link": ""
+
+    }]
+}]

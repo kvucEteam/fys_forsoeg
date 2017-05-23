@@ -13,8 +13,7 @@
 </head>
 
 <body>
-    
-        <div class="embed-responsive embed-responsive-16by9 col-xs-12 col-md-12">
+           <div class="embed-responsive embed-responsive-16by9 col-xs-12 col-md-12">
             <div id="player"></div>
         </div>
     
@@ -29,7 +28,7 @@
 
        function onYouTubePlayerAPIReady() {
         player = new YT.Player('player', {
-            videoId: 'WG-lbksr2Ks',
+            videoId: 'dQxzMjgAoX0',
             playerVars: {
                 'id': 'ytPlayer',
                 'enablejsapi': 1,
@@ -52,7 +51,7 @@
 
                     console.log("PS: " + event.data);
                     if (event.data == YT.PlayerState.ENDED) {
-                        parent.slide_complete(4);
+                        parent.slide_complete(2);
                     }
                 }
             }

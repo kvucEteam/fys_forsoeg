@@ -111,14 +111,12 @@ function setUpTube() {
 //    after the API code downloads.
 
 function onYouTubeIframeAPIReady() {
-
     setupplayer();
     console.log("onYouTubeIframeAPIReady");
-
 }
 
-function setupplayer() {
 
+function setupplayer() {
     console.log("SET UP PLAYER");
     $("#overlay").toggle();
     player = new YT.Player('player', {
@@ -282,6 +280,16 @@ function stop_event(tal, taeller) {
     svar_length = spm.svar.length;
     svar = spm.svar;
 
+    //alert ("akt_runde: " + runde + ", Stops: " + stops.length);
+    console.log("runde: "  +runde + ", stops: " + stops.length)
+
+    if (runde >= stops.length-1) {
+
+        if (parent.opgavenummer == 1) { parent.slide_complete(7); } else if (parent.opgavenummer == 2) { parent.slide_complete(6); }
+
+
+    }
+
 
     /////
     var options_text = "";
@@ -343,7 +351,7 @@ function stop_event(tal, taeller) {
 
     } else if (spm.eventtype == "svarknap") {
 
-    	$(".container_tekst").css("opacity", "0");
+        $(".container_tekst").css("opacity", "0");
 
 
         /*var HTML = "<h5 class='score'></h5>";
@@ -361,7 +369,6 @@ function stop_event(tal, taeller) {
                 $(this).addClass("btn_chosen btn-primary");
                 $(this).removeClass("btn-info");
 
-
             } else {
                 $(this).toggleClass("btn_chosen btn-primary");
                 $(this).toggleClass("btn-info");
@@ -370,13 +377,8 @@ function stop_event(tal, taeller) {
                 $(".btn_videre").fadeIn().click(commit_answers);
                 chosen = true;
             }
-
         });
-
-
     }
-
-
 
 }
 
@@ -396,9 +398,11 @@ function commit_answers() {
                 $(".score_num").html(total_score + " ud af " + spm_length);
                 $(".score_num").fadeIn(); // Animation complete.
             });
+
         } else {
             $(".btn_chosen").css("background-color", "#ED3E3A").css("border", "1px solid #ed3e3a");
         }
+
     } else {
         valgt = [];
 
@@ -409,6 +413,7 @@ function commit_answers() {
                 $(this).css("background-color", "#2abb2a").css("border", "1px solid #2abb2a");
                 score++;
                 console.log("korrekt!");
+
             } else {
                 fejl++;
                 $(this).css("background-color", "#ed3e3a").css("border", "1px solid #ed3e3a");
@@ -448,20 +453,15 @@ function feedback() {
     }
 
     //tween in feedback: 
-    $(".svarcontainer").delay(2000).fadeOut(1000, function() {
+    $(".svarcontainer").delay(1000).fadeOut(500, function() {
         $(".spm_tekst").fadeOut(0);
         $(".container_tekst").append("<div class='feedback'><div class='h3'>" + spm.feedback + "</div><div class = 'h4'><div class='correct_answers btn-success'>Rigtig besvarelse: </div>" + correct_answers + "<br/></div>");
         $(".popud").append("<div class ='btn btn-default btn-lg btn_videre'>Fortsæt</div>");
         $(".feedback").fadeOut(0);
         $(".feedback").fadeIn(1000);
-
         $("#overlay").click(next_event);
-
     });
 }
-
-
-
 
 function next_event() {
     //alert(checkTimer);
@@ -494,6 +494,7 @@ function next_event() {
             //NO MORE STOPS ///
             //console.log("case_slut");
             slutFeedback();
+
         } else {
 
             $("#overlay").fadeOut(1000, function() {

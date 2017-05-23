@@ -19,7 +19,7 @@
             "timestamp": 39,
             "events": [{
                 "eventtype": "nav_stop",
-                "tekst": "Hent og åbn Excelarket. Find papir, blyant og lommeregner frem.",
+                "tekst": "Hent og åbn Excel-filen. Find papir, blyant og lommeregner frem.",
 
                 "svar": [
                     "Er du klar?"
@@ -53,7 +53,7 @@
             "timestamp": 96,
             "events": [{
                 "eventtype": "nav_stop",
-                "tekst": "For hver værdi af x<sub>n</sub> skal du nu beregne den tilhørende afbøjningsvinkel, theta<sub>n</sub>.",
+                "tekst": "For hver værdi af x_n skal du nu beregne den tilhørende afbøjningsvinkel, theta_n.",
                 "svar": [
                     "Se udregning",
                     "Se løsning",
@@ -68,9 +68,9 @@
             }]
 
         }, {
-            "timestamp": 195,
+            "timestamp": 193,
             "events": [{
-                "eventtype": "nav_stop",
+                "eventtype": "svarknap",
                 "tekst": "For hver afbøjningsvinkel skal du beregne bølgelængden ud fra gitterligningen. Angiv bølgelængden i nanometer.",
                 "svar": [
                     "Se udregning",
@@ -88,7 +88,7 @@
         }, {
             "timestamp": 297,
             "events": [{
-                "eventtype": "nav_stop",
+                "eventtype": "svarknap",
                 "tekst": "Tag til sidst gennemsnittet af de bølgelængder, du har beregnet.",
                 "svar": [
                     "Se udregning",

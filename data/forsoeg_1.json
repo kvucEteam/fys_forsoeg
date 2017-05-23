@@ -21,15 +21,15 @@
         "labels": [{
             "labels_txt": "L",
             "label_pos": [22, 58],
-            "info_txt": "<h3>LASER </h3>Hvidt lys, som vi kender fra Solen, er sammensat af mange forskellige farver. Det ser vi, når lyset afbøjes i regndråber og danner regnbuer på himlen. Laserlys er anderledes, bl.a. fordi det kun har én bestemt farve. Lys er elektromagnetiske bølger, og en bestemt farve svarer til en bestemt bølgelængde. En laser har altså en meget veldefineret bølgelængde. Denne bølgelængde er dog forskellig for forskellige typer laser. En rød laser kan fx have bølgelængden 650 nm. En grøn laser kan fx have bølgelængden 532 nm. <br/>En anden karakteristisk egenskab ved laserlys er, at det kan fokuseres i meget højere grad end andre former for lys. En lysstråle og den energi, den transporterer, kan altså koncentreres på et meget lille areal. Dette gør det muligt at lave laser-pointere og CD/DVD-afspillere, som de fleste kender, men samme princip gør det muligt at bruge laserlys til fx kirurgi og svejsning."
+            "info_txt": "<h3 class='label_header'>LASER </h3>Hvidt lys, som vi kender fra Solen, er sammensat af mange forskellige farver. Det ser vi, når lyset afbøjes i regndråber og danner regnbuer på himlen. Laserlys er anderledes, bl.a. fordi det kun har én bestemt farve. Lys er elektromagnetiske bølger, og en bestemt farve svarer til en bestemt bølgelængde. En laser har altså en meget veldefineret bølgelængde. Denne bølgelængde er dog forskellig for forskellige typer laser. En rød laser kan fx have bølgelængden 650 nm. En grøn laser kan fx have bølgelængden 532 nm. <br/>En anden karakteristisk egenskab ved laserlys er, at det kan fokuseres i meget højere grad end andre former for lys. En lysstråle og den energi, den transporterer, kan altså koncentreres på et meget lille areal. Dette gør det muligt at lave laser-pointere og CD/DVD-afspillere, som de fleste kender, men samme princip gør det muligt at bruge laserlys til fx kirurgi og svejsning."
         }, {
             "labels_txt": "0",
             "label_pos": [38, 68],
-            "info_txt": "<h3>GITTER</h3>Et optisk gitter er en glasplade, hvori der er ridset nogle meget fine linjer. Linjerne ligger meget tæt med typisk flere hundrede linjer inden for en enkelt millimeter. Linjerne virker som små spalter, som lys kan trænge igennem. Hvis spaltebredden er tilstrækkelig lille, dvs. sammenlignelig med lysets bølgelængde, vil lyset afbøjes, når det passerer igennem. Denne afbøjning kaldes diffraktion. Lys med forskellige bølgelængder vil afbøjes i forskellige vinkler. Derfor kan man bruge gitteret til at splitte lys med mange forskellige bølgelængder op i de enkelte bølgelængder. Ved at måle afbøjningsvinklerne kan man også regne tilbage og finde ud af, hvilken bølgelængde lyset havde. Et optisk gitter kan altså bruges til at analysere, hvilke bølgelængder en lysstråle indeholder."
+            "info_txt": "<h3 class='label_header'>GITTER</h3>Et optisk gitter er en glasplade, hvori der er ridset nogle meget fine linjer. Linjerne ligger meget tæt med typisk flere hundrede linjer inden for en enkelt millimeter. Linjerne virker som små spalter, som lys kan trænge igennem. Hvis spaltebredden er tilstrækkelig lille, dvs. sammenlignelig med lysets bølgelængde, vil lyset afbøjes, når det passerer igennem. Denne afbøjning kaldes diffraktion. Lys med forskellige bølgelængder vil afbøjes i forskellige vinkler. Derfor kan man bruge gitteret til at splitte lys med mange forskellige bølgelængder op i de enkelte bølgelængder. Ved at måle afbøjningsvinklerne kan man også regne tilbage og finde ud af, hvilken bølgelængde lyset havde. Et optisk gitter kan altså bruges til at analysere, hvilke bølgelængder en lysstråle indeholder."
         }, {
             "labels_txt": "n",
             "label_pos": [65, 51],
-            "info_txt": "<h3>INTERFERENSMØNSTER</h3>Når lys går gennem spalterne i gitteret, vil der bag hver linje i gitteret udbredes en (halv) ringformet lysbølge, ligesom når man smider en sten i vandet. Alle disse ringbølger vil flette sig ind i hinanden. Når to bølgetoppe eller bølgedale møder hinanden opstår såkaldt konstruktiv interferens, dvs. bølgen bliver på dette sted og dette tidspunkt kraftigere. Når bølgetop og bølgedal møder hinanden, vil der omvendt opstå såkaldt destruktiv interferens, dvs. bølgerne udsletter hinanden på dette sted og dette tidspunkt. Bag et gitter, hvori der er ridset mange linjer ved siden af hinanden, vil der være forskellige retninger, hvori der hele tiden er konstruktiv interferens. Langs disse retninger vil lyset altså udbrede sig bag gitteret. Det er disse retninger, der svarer til strålerne af nulte, første, anden orden og så videre."
+            "info_txt": "<h3 class='label_header'>INTERFERENSMØNSTER</h3>Når lys går gennem spalterne i gitteret, vil der bag hver linje i gitteret udbredes en (halv) ringformet lysbølge, ligesom når man smider en sten i vandet. Alle disse ringbølger vil flette sig ind i hinanden. Når to bølgetoppe eller bølgedale møder hinanden opstår såkaldt konstruktiv interferens, dvs. bølgen bliver på dette sted og dette tidspunkt kraftigere. Når bølgetop og bølgedal møder hinanden, vil der omvendt opstå såkaldt destruktiv interferens, dvs. bølgerne udsletter hinanden på dette sted og dette tidspunkt. Bag et gitter, hvori der er ridset mange linjer ved siden af hinanden, vil der være forskellige retninger, hvori der hele tiden er konstruktiv interferens. Langs disse retninger vil lyset altså udbrede sig bag gitteret."
         }]
 
     }, {
@@ -41,32 +41,32 @@
     }, {
         "header": "<span class='header_glyph glyphicon glyphicon-info-sign'></span> Teori",
         "type": "html",
-        "html_content": "<h2>Informationstavle om om teorien</h2><div class='bg_container bg_container_4'> <img src='img/laser_info_3.png' class='bg_image img-responsive' /> </div> ",
+        "html_content": "<h2>Informationstavle om teorien</h2><div class='bg_container bg_container_4'> <img src='img/laser_info_3.png' class='bg_image img-responsive' /> </div> ",
         "iframe_link": "",
         "labels": [{
             "labels_txt": "L",
             "label_pos": [66, 6.4],
-            "info_txt": "<h3>Længde </h3>L står for længde. L er længden mellem gitteret og væggen. <br/>Når L måles, er det vigtigt at sikre, at det er den vinkelrette afstand i på væggen, der måles. "
+            "info_txt": "<h3 class='label_header'>Længde </h3>L står for længde. L er længden mellem gitteret og væggen. <br/>Når L måles, er det vigtigt at sikre, at det er den vinkelrette afstand i på væggen, der måles. "
         }, {
             "labels_txt": "θ",
             "label_pos": [68.5, 60.3],
-            "info_txt": "<h3>Teta</h3>θ er et græsk bogstav, som udtales “theta”. Det står for vinkel.<br/>Der er forskellige værdier af θ. Vi kalder dem θ<sub>1</sub>, θ<sub>2</sub>, θ<sub>3</sub> osv.<br/>θ<sub>1</sub> er vinklen mellem nulteordensstrålen og førsteordensstrålen. θ<sub>2</sub> er vinklen mellem nulteordensstrålen og andenordensstrålen. Og så videre."
+            "info_txt": "<h3 class='label_header'>Teta</h3>θ er et græsk bogstav, som udtales “theta”. Det står for vinkel.<br/>Der er forskellige værdier af θ. Vi kalder dem θ<sub>1</sub>, θ<sub>2</sub>, θ<sub>3</sub> osv.<br/>θ<sub>1</sub> er vinklen mellem nulteordensstrålen og førsteordensstrålen. θ<sub>2</sub> er vinklen mellem nulteordensstrålen og andenordensstrålen. Og så videre."
         }, {
             "labels_txt": "n",
             "label_pos": [85.4, 28.5],
-            "info_txt": "<h3>n</h3>n er ordenens nummer. Gitteret deler lyset op i forskellige stråler, som nummereres. <br/>Den midterste stråle har nummer 0. Den kaldes nulteordensstrålen. For denne stråle er n=0.<br/>Ved siden af nulteordensstrålen er der to førsteordensstråler. For begge disse stråler er n=1.<br/>Dernæst kommer to andenordensstråler med n=2 osv."
+            "info_txt": "<h3 class='label_header'>n</h3>n er ordenens nummer. Gitteret deler lyset op i forskellige stråler, som nummereres. <br/>Den midterste stråle har nummer 0. Den kaldes nulteordensstrålen. For denne stråle er n=0.<br/>Ved siden af nulteordensstrålen er der to førsteordensstråler. For begge disse stråler er n=1.<br/>Dernæst kommer to andenordensstråler med n=2 osv."
         }, {
             "labels_txt": "x",
             "label_pos": [78, 53.6],
-            "info_txt": "<h3>x</h3>x er længden mellem nulteordensprikken og prikkerne af højere orden. Der er forskellige værdier af x. Vi kalder dem x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub> osv.<br/>x<sub>1</sub> er altså afstanden mellem nulteordensprikken og førsteordensprikken. x<sub>2</sub> er afstanden mellem nulteordensprikken og andenordensprikken osv."
+            "info_txt": "<h3 class='label_header'>x</h3>x er længden mellem nulteordensprikken og prikkerne af højere orden. Der er forskellige værdier af x. Vi kalder dem x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub> osv.<br/>x<sub>1</sub> er altså afstanden mellem nulteordensprikken og førsteordensprikken. x<sub>2</sub> er afstanden mellem nulteordensprikken og andenordensprikken osv."
         }, {
             "labels_txt": "λ",
             "label_pos": [31, 27.2],
-            "info_txt": "<h3>Lambda</h3>λ er et græsk bogstav, som udtales “lambda”. Det står for bølgelængde. <br/>Bølgelængden er afstanden mellem to bølgetoppe (eller to bølgedale). <br/>Synligt lys har meget små bølgelængder, som ligger i området ca. 400-700 nanometer. Det er bølgelængden, der bestemmer lysets farve."
+            "info_txt": "<h3 class='label_header'>Lambda</h3>λ er et græsk bogstav, som udtales “lambda”. Det står for bølgelængde. <br/>Bølgelængden er afstanden mellem to bølgetoppe (eller to bølgedale). <br/>Synligt lys har meget små bølgelængder, som ligger i området ca. 400-700 nanometer. Det er bølgelængden, der bestemmer lysets farve."
         }, {
             "labels_txt": "d",
             "label_pos": [39, 76],
-            "info_txt": "<h3>Gitterkonstanten</h3>d står for gitterkonstanten. Gitterkonstanten fortæller noget om det optiske gitters konstruktion. Gitteret er en glasplade med tusindvis af fine spalter ridset i. Gitterkonstanten angiver afstanden mellem to nabospalter. <br/>Gitterkonstanten er en meget lille afstand. Den ligger typisk i størrelsesordenen nogle få mikrometer."
+            "info_txt": "<h3 class='label_header'>Gitterkonstanten</h3>d står for gitterkonstanten. Gitterkonstanten fortæller noget om det optiske gitters konstruktion. Gitteret er en glasplade med tusindvis af fine spalter ridset i. Gitterkonstanten angiver afstanden mellem to nabospalter. <br/>Gitterkonstanten er en meget lille afstand. Den ligger typisk i størrelsesordenen nogle få mikrometer."
         }]
 
     }, {
