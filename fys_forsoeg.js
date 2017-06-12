@@ -2,36 +2,51 @@ var jsonSlides;
 var complete_slides = 0;
 var active_slide = 0;
 var saveArray = [];
-var opgavenummer; 
+var opgave_nummer;
 
 var audio = document.getElementById("myAudio");
 
+var lock_mode = true;
+
 $(document).ready(function() {
 
-    $(".new_window_link").css("opacity","0");
+    $(".new_window_link").css("opacity", "0");
 
-opgavenummer = window.location.href.substring(window.location.href.length-5, window.location.href.length-6);
+    //opgave_nummer = window.location.href.substring(window.location.href.length - 5, window.location.href.length - 6);
 
+
+    console.log("OPDSAJK: " + opgave_nummer);
+
+
+    var urlvar = ReturnURLPerameters();
+
+    if (urlvar.version == "unlocked") {
+        lock_mode = false;
+    };
 
     init();
-
 
 });
 
 /*=============================================
+
+
 =            Lav navigation og generelle funktioner            =
 =============================================*/
 
 function init() {
 
+    //alert("opgave_nummer:" + opgave_nummer);
+
     jsonSlides = jsonData[0].slides;
     var navHTML = "";
 
-
-
     for (var i = 0; i < jsonSlides.length; i++) {
-        navHTML += "<div class='btn btn-info btn-nav locked'>" + jsonSlides[i].header + "<div class='lockicon'><span class='glyphicons glyphicons-lock'></span></div></div>";
-    //navHTML += "<div class='btn btn-info btn-nav locked'>" + jsonSlides[i].header + "</div>";
+        if (lock_mode == true) {
+            navHTML += "<div class='btn btn-info btn-nav locked'>" + jsonSlides[i].header + "<div class='lockicon'><span class='glyphicons glyphicons-lock'></span></div></div>";
+        } else {
+            navHTML += "<div class='btn btn-info btn-nav locked'>" + jsonSlides[i].header + "</div>";
+        }
     }
 
     //console.log("complete_slides: " + complete_slides); 
@@ -40,9 +55,14 @@ function init() {
 
     $(".top_nav_container").html(navHTML);
 
-    $(".top_nav_container").append("<br/><a href='data/data_bolgelaengde.xlsx'> <div class='btn btn-primary btn_excel'><span class='glyphicon glyphicon-download-alt'></span> Download Excelark </div></a>");
-    $(".top_nav_container").append("<a href='data/bolgelaengderapport.docx'> <div class='btn btn-primary btn_word'><span class='glyphicon glyphicon-download-alt'></span> Download Wordskabelon </div></a>");
+    if (opgave_nummer == 1) {
 
+        $(".top_nav_container").append("<br/><a href='data/data_bolgelaengde.xlsx'> <div class='btn btn-primary btn_excel'><span class='glyphicon glyphicon-download-alt'></span> Download Excelark </div></a>");
+        $(".top_nav_container").append("<a href='data/bolgelaengderapport.docx'> <div class='btn btn-primary btn_word'><span class='glyphicon glyphicon-download-alt'></span> Download Wordskabelon </div></a>");
+    } else {
+        $(".top_nav_container").append("<br/><a href='data/data_varmefylde.xlsx'> <div class='btn btn-primary btn_excel'><span class='glyphicon glyphicon-download-alt'></span> Download Excelark </div></a>");
+        $(".top_nav_container").append("<a href='data/varme_fylderapport.docx'> <div class='btn btn-primary btn_word'><span class='glyphicon glyphicon-download-alt'></span> Download Wordskabelon </div></a>");
+    }
 
     $(".btn_excel").fadeOut(0);
     $(".btn_word").fadeOut(0);
@@ -87,10 +107,12 @@ function init() {
 
 function clicked_nav(obj) {
 
+
+
     //document.getElementById('FrameID').contentWindow.location.reload(true);
 
 
-    $(".microhint").remove();
+    //$(".microhint").remove();
 
     //document.getElementById('iframe_vid').contentWindow.helloframe();
 
@@ -100,15 +122,17 @@ function clicked_nav(obj) {
     var indeks = obj.index();
     console.log("Active slide: " + indeks);
 
-    active_slide = indeks;
+
 
     console.log("AS: " + active_slide);
+    console.log("locked?: " + lock_mode);
 
-    if (obj.hasClass("locked")) {
+    if (obj.hasClass("locked") && lock_mode == true) {
         //console.log("Se filmen før du går videre");
         //microhint(obj, "Se filmen før du går videre");
-        microhint($(".btn-nav").eq(complete_slides), "Du skal først være færdig med denne fane, før du kan gå videre.");
+        microhint($(".btn-nav").eq(complete_slides), "Du skal være færdig med denne fane, før du kan gå videre.");
     } else {
+        active_slide = indeks;
 
         var contentHTML = "";
         contentHTML += "<div class='slide_container content_" + indeks + "'> " + jsonSlides[indeks].html_content + "</div>";
@@ -126,18 +150,33 @@ function clicked_nav(obj) {
     //$(".new_window_link").hide();
     saveData();
 
-    if (active_slide == 6) {
-        $(".btn_excel").fadeIn(200);
+    if (opgave_nummer == 1) {
+
+        if (active_slide == 6) {
+            $(".btn_excel").fadeIn(200);
+        } else {
+            $(".btn_excel").fadeOut(0);
+        }
+        if (active_slide == 7) {
+            $(".btn_word").fadeIn(200);
+        } else {
+            $(".btn_word").fadeOut(0);
+        }
     } else {
-        $(".btn_excel").fadeOut(0);
-    }
-    if (active_slide == 7) {
-        $(".btn_word").fadeIn(200);
-    } else {
-        $(".btn_word").fadeOut(0);
+
+        if (active_slide == 5) {
+            $(".btn_excel").fadeIn(200);
+        } else {
+            $(".btn_excel").fadeOut(0);
+        }
+        if (active_slide == 6) {
+            $(".btn_word").fadeIn(200);
+        } else {
+            $(".btn_word").fadeOut(0);
+        }
     }
 
-    if (active_slide == 2 && opgavenummer == 1) {
+    if (active_slide == 2 && opgave_nummer == 1) {
 
         for (var i = 0; i < jsonSlides[2].labels.length; i++) {
             var element = jsonSlides[2].labels[i];
@@ -149,7 +188,7 @@ function clicked_nav(obj) {
         }
     }
 
-    if (active_slide == 4 && opgavenummer == 1) {
+    if (active_slide == 4 && opgave_nummer == 1) {
         for (var i = 0; i < jsonSlides[4].labels.length; i++) {
             var element = jsonSlides[4].labels[i];
             console.log(i + " punkt");
@@ -160,13 +199,15 @@ function clicked_nav(obj) {
         }
     }
 
-        if (active_slide == 3 && opgavenummer == 2) {
-            
+    if (active_slide == 3 && opgave_nummer == 2) {
+
+        console.log("WE ARE HERE!" + active_slide);
+
         for (var i = 0; i < jsonSlides[3].labels.length; i++) {
             var element = jsonSlides[3].labels[i];
             console.log(i + " punkt");
             //viewArray[state].append("<div><img class='gif' src=" + element.pics[state] + "></div>");
-            $(".bg_container_4").append("<span class='detalje_label detalje_label_3'><img class='img-responsive' src='img/ikoninfo.png'><span class='info_byline'>"+element.labels_txt+"</span></span>");
+            $(".bg_container_4").append("<span class='detalje_label detalje_label_3'><img class='img-responsive' src='img/ikoninfo.png'><span class='info_byline'>" + element.labels_txt + "</span></span>");
             $(".detalje_label_3").eq(i).css("left", element.label_pos[0] + "%").css("top", element.label_pos[1] + "%")
                 //$(".gif").eq(i).css("left", element.balance_pos[0] + "%").css("top", element.balance_pos[1] + "%");
         }
@@ -182,7 +223,7 @@ function clicked_nav(obj) {
         });
     });
 
-        $(".detalje_label_3").click(function() {
+    $(".detalje_label_3").click(function() {
         slide_complete(4);
         $(".microhint").remove();
         var indeks = $(this).index() - 1;
@@ -230,12 +271,12 @@ function slide_complete(comp_num) {
 function returnLastStudentSession() {
     window.osc = Object.create(objectStorageClass);
 
-    if (opgavenummer == 1){
-        osc.init('student_forsoeg_opg_b1');
-    } else if (opgavenummer == 2){
-        osc.init('student_forsoeg_opg_2_b3');
+    if (opgave_nummer == 1) {
+        osc.init('student_forsoeg_opg_b4');
+    } else if (opgave_nummer == 2) {
+        osc.init('student_forsoeg_opg_2_b123');
     }
-    
+
     osc.exist('jsonData');
 
     var TjsonData = osc.load('jsonData');
@@ -246,7 +287,7 @@ function returnLastStudentSession() {
         active_slide = TjsonData[1];
     }
 
-    console.log("savedData BRO BRO: " + complete_slides);
+    console.log("savedData: " + complete_slides);
 
     $(".btn-nav").each(function() {
         var indeks = $(this).index();

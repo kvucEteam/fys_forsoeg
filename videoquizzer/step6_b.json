@@ -1,5 +1,5 @@
 [{
-        "video": "M9C389_m5jA"
+        "video": "WcUELX03nAg"
     },
 
     {
@@ -16,7 +16,25 @@
 
     {
         "stops": [{
-            "timestamp": 67,
+            "timestamp": 52,
+            "events": [{
+                "eventtype": "nav_stop",
+                "tekst": "Prøv at identificere metallet før du går videre <br/>",
+
+                "svar": [
+                    "Gå videre"
+                    
+
+                ],
+                "timestamps": [
+                    "118",
+                    "218"
+
+                ],
+                "hint": "Her er et hint der muligvis kommer i LateX eller noget andet sjovt."
+            }]
+        },{
+            "timestamp": 63,
             "events": [{
                 "eventtype": "nav_stop",
                 "tekst": "Hvad vil du nu?",
@@ -28,8 +46,8 @@
 
                 ],
                 "timestamps": [
-                    "118",
-                    "149"
+                    "149",
+                    "218"
 
                 ],
                 "hint": "Her er et hint der muligvis kommer i LateX eller noget andet sjovt."
@@ -40,47 +58,47 @@
                 "eventtype": "svarknap",
                 "tekst": "Hvad er formålet med eksperimentet?",
                 "svar": [
-                    "At bestemme gitterkonstanten for et optisk gitter","At bestemme bølgelængden for laserlys","At bestemme hastigheden for laserlys"
-                ],
-                "korrekt": [
-                    "1"
-                ],
-                "feedback": "Hvad er formålet med eksperimentet?"
-            },{
-                "eventtype": "svarknap",
-                "tekst": "Hvad siger gitterligningen?",
-                "svar": [
-                    "n &#9679 λ = d &#9679 sin(Өn)","n &#9679 d = λ &#9679 sin(Өn)","λ &#9679 d = n &#9679 sin(Өn)"
-                ],
-                "korrekt": [
-                    "0"
-                ],
-                "feedback": "Hvad siger gitterligningen?"
-            },{
-                "eventtype": "svarknap",
-                "tekst": "Hvad angiver ordenen i dette eksperiment?",
-                "svar": [
-                    "Laserens styrke", "Antal spalter pr. mm i gitteret", "Nummeret på en af de afbøjede lysstråler"
+                    "At bestemme massefylden for et metal", "At bestemme massefylden for vand", "At bestemme varmefylden for et metal", "At bestemme varmefylden for vand" 
                 ],
                 "korrekt": [
                     "2"
                 ],
+                "feedback": ""
+            },{
+                "eventtype": "svarknap",
+                "tekst": "Hvad forstår man ved varmefylde?",
+                "svar": [
+                    "Hvor meget temperaturen stiger i 1 kg stof, hvis man tilfører energien 1 Joule", "Hvor meget energi man skal tilføre 1 kg stof for at hæve temperaturen 1 grad Celsius","Hvor meget termisk energi stoffet indeholder"
+                ],
+                "korrekt": [
+                    "2"
+                ],
+                "feedback": "Hvilken formel er rigtig??"
+            },{
+                "eventtype": "svarknap",
+                "tekst": "Hvilken formel er rigtig?",
+                "svar": [
+                    "∆E = m &#9679 c &#9679 ∆T", "∆T = m &#9679 c &#9679 ∆E","c = m &#9679 ∆E &#9679 ∆T"
+                ],
+                "korrekt": [
+                    "0"
+                ],
                 "feedback": "Hvad angiver ordenen i dette eksperiment?"
             },{
                 "eventtype": "svarknap",
-                "tekst": "Hvad angiver gitterkonstanten?",
+                "tekst": "∆T kan beregnes som:",
                 "svar": [
-                    "Antal spalter pr. mm i gitteret","Afstanden mellem to spalter i gitteret","Antallet af spalter i gitteret"
+                    "Starttemperatur minus sluttemperatur","Sluttemperatur minus starttemperatur", "Det er forskelligt"
                 ],
                 "korrekt": [
                     "1"
                 ],
-                "feedback": "Hvad angiver gitterkonstanten?"
+                "feedback": ""
             },{
                 "eventtype": "svarknap",
-                "tekst": "Hvad er en realistisk bølgelængde for en grøn laser?",
+                "tekst": "Hvad er varmefylden for vand?",
                 "svar": [
-                    "458 nm","532 nm","650 nm"
+                    "<img src='../img/CodeCogsEqn.png' class='img-responsive formel_pic'>","<img src='../img/CodeCogsEqn_2.png' class='img-responsive formel_pic'>","<img class='img-responsive formel_pic' src='../img/CodeCogsEqn_2.png'>"
                 ],
                 "korrekt": [
                     "1"
@@ -88,9 +106,9 @@
                 "feedback": "Hvad er en realistisk bølgelængde for en grøn laser?"
             },{
                 "eventtype": "svarknap",
-                "tekst": "For et optisk gitter er d = 0.01 mm. <br/>Dette betyder, at der er…",
+                "tekst": "Et stof har en varmefylde på 250 <div class='inline_pic_container'> <img class='img-responsive' src='../img/CodeCogsEqn_4.png'> </div> <br/>Stoffet vejer 2 kg. Vi tilfører energien ∆E=1000 J. <br>Hvor meget stiger temperaturen?",
                 "svar": [
-                    "100 spalter pr. mm","1000 spalter pr. mm","100 000 spalter pr. mm"
+                    "2 <sup>o</sup>C","4 <sup>o</sup>C","8 <sup>o</sup>C"
                 ],
                 "korrekt": [
                     "0"

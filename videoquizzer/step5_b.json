@@ -1,5 +1,5 @@
 [{
-        "video": "doadNU5xaoI"
+        "video": "e8P_JyoYXLo"
     },
 
     {
@@ -7,7 +7,7 @@
     },
 
     {
-        "intro_text": "Du skal gennemgå tre film, som beskriver databehandlingen."
+        "intro_text": "Denne film stopper undervejs. Når filmen stopper, skal du regne på de data, som du fandt i målingerne. <br/>Du kan efterfølgende se svaret blive regnet ud."
     },
 
     {
@@ -16,7 +16,7 @@
 
     {
         "stops": [{
-            "timestamp": 39,
+            "timestamp": 37,
             "events": [{
                 "eventtype": "nav_stop",
                 "tekst": "Hent og åbn Excel-filen. Find papir, blyant og lommeregner frem.",
@@ -33,74 +33,39 @@
                 "hint": "Her er et hint der muligvis kommer i LateX eller noget andet sjovt."
             }]
         }, {
-            "timestamp": 47,
+            "timestamp": 58,
             "events": [{
                 "eventtype": "nav_stop",
-                "tekst": "Beregn gitterkonstanten ud fra antallet af spalter pr. mm. Husk at omregne til nanometer.",
+                "tekst": "Beregn først de to temperaturtilvækster ud fra start- og sluttemperaturerne.",
                 "svar": [
                     "Se udregning",
                     "Se løsning",
                     "Gå til næste regnestykke"
                 ],
                 "timestamps": [
-                    "79",
-                    "86"
+                    "127",
+                    "130"
 
                 ],
                 "hint": "Her er et hint der muligvis kommer i LateX eller noget andet sjovt."
             }]
         }, {
-            "timestamp": 96,
+            "timestamp": 147,
             "events": [{
                 "eventtype": "nav_stop",
-                "tekst": "For hver værdi af x_n skal du nu beregne den tilhørende afbøjningsvinkel, theta_n.",
+                "tekst": "Beregn varmefylden for metallet.",
                 "svar": [
                     "Se udregning",
-                    "Se løsning",
-                    "Gå til næste regnestykke"
+                    "Se løsning"
                 ],
                 "timestamps": [
-                    "174",
-                    "180"
+                    "245"
+                 
 
                 ],
                 "feedback": "Det var heldigt. Klik på knappen herunder for at fortsætte."
             }]
 
-        }, {
-            "timestamp": 193,
-            "events": [{
-                "eventtype": "svarknap",
-                "tekst": "For hver afbøjningsvinkel skal du beregne bølgelængden ud fra gitterligningen. Angiv bølgelængden i nanometer.",
-                "svar": [
-                    "Se udregning",
-                    "Se løsning",
-                    "Gå til næste regnestykke"
-
-                ],
-                "timestamps": [
-                    "278",
-                    "287"
-
-                ],
-                "feedback": "Historikere bruger kilder til at underbygge deres beskrivelser af fortiden."
-            }]
-        }, {
-            "timestamp": 297,
-            "events": [{
-                "eventtype": "svarknap",
-                "tekst": "Tag til sidst gennemsnittet af de bølgelængder, du har beregnet.",
-                "svar": [
-                    "Se udregning",
-                    "Se løsning"
-
-                ],
-                "timestamps": [
-                    "344"
-
-                ],
-                "feedback": "Historikere bruger kilder til at underbygge deres beskrivelser af fortiden."
-            }]
         }]
     }
 ]

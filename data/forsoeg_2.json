@@ -16,7 +16,7 @@
     }, {
         "header": "<span class='header_glyph glyphicon glyphicons glyphicons-play'></span><span class='btn_text'>Teori</span>",
         "type": "html",
-        "html_content": "<h2>Hvilken teori skal benyttes i eksperimentet?</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' id='iframe_vid' src='videoquizzer/mtubes3.html'></iframe></div>",
+        "html_content": "<h2>Hvilken teori skal benyttes i eksperimentet?</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' id='iframe_vid' src='videoquizzer/mtubes_b3.html'></iframe></div>",
         "iframe_link": ""
 
     }, {
@@ -79,12 +79,12 @@
     }, {
         "header": "<span class='header_glyph glyphicon glyphicons glyphicons-play'></span>Databehandling",
         "type": "iframe",
-        "html_content": "<h2>Hvordan udføres databehandlingen?</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' src='videoquizzer/step5.html'></iframe> </div></div>"
+        "html_content": "<h2>Hvordan udføres databehandlingen?</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' src='videoquizzer/step5_b.html'></iframe> </div></div>"
 
     }, {
         "header": "<span class='header_glyph glyphicon glyphicons glyphicons-play'></span>Konklusion",
         "type": "html",
-        "html_content": "<h2>Hvad kan vi konkludere?</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' src='videoquizzer/step6.html'></iframe> </div></div>",
+        "html_content": "<h2>Hvad kan vi konkludere?</h2><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' src='videoquizzer/step6_b.html'></iframe> </div></div>",
         "iframe_link": ""
 
     }]
