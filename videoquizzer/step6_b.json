@@ -19,7 +19,7 @@
             "timestamp": 52,
             "events": [{
                 "eventtype": "nav_stop",
-                "tekst": "Prøv at identificere metallet før du går videre <br/>",
+                "tekst": "Prøv at identificere metallet, før du går videre <br/>",
 
                 "svar": [
                     "Gå videre"
@@ -63,7 +63,7 @@
                 "korrekt": [
                     "2"
                 ],
-                "feedback": ""
+                "feedback": "Formålet med eksperimentet er:"
             },{
                 "eventtype": "svarknap",
                 "tekst": "Hvad forstår man ved varmefylde?",
@@ -71,19 +71,19 @@
                     "Hvor meget temperaturen stiger i 1 kg stof, hvis man tilfører energien 1 Joule", "Hvor meget energi man skal tilføre 1 kg stof for at hæve temperaturen 1 grad Celsius","Hvor meget termisk energi stoffet indeholder"
                 ],
                 "korrekt": [
-                    "2"
+                    "1"
                 ],
-                "feedback": "Hvilken formel er rigtig??"
+                "feedback": "Ved varmefylde forstås"
             },{
                 "eventtype": "svarknap",
                 "tekst": "Hvilken formel er rigtig?",
                 "svar": [
-                    "∆E = m &#9679 c &#9679 ∆T", "∆T = m &#9679 c &#9679 ∆E","c = m &#9679 ∆E &#9679 ∆T"
+                    "∆E = m <span class='dot'>&#9679</span> c <span class='dot'>&#9679</span> ∆T", "∆T = m <span class='dot'>&#9679</span> c <span class='dot'>&#9679</span> ∆E","c = m <span class='dot'>&#9679</span> ∆E <span class='dot'>&#9679</span> ∆T"
                 ],
                 "korrekt": [
                     "0"
                 ],
-                "feedback": "Hvad angiver ordenen i dette eksperiment?"
+                "feedback": "Den rigtige formel er"
             },{
                 "eventtype": "svarknap",
                 "tekst": "∆T kan beregnes som:",
@@ -91,19 +91,19 @@
                     "Starttemperatur minus sluttemperatur","Sluttemperatur minus starttemperatur", "Det er forskelligt"
                 ],
                 "korrekt": [
-                    "1"
+                    "0"
                 ],
-                "feedback": ""
+                "feedback": "∆T kan beregnes som "
             },{
                 "eventtype": "svarknap",
                 "tekst": "Hvad er varmefylden for vand?",
                 "svar": [
-                    "<img src='../img/CodeCogsEqn.png' class='img-responsive formel_pic'>","<img src='../img/CodeCogsEqn_2.png' class='img-responsive formel_pic'>","<img class='img-responsive formel_pic' src='../img/CodeCogsEqn_2.png'>"
+                    "<img src='../img/CodeCogsEqn.png' class='img-responsive formel_pic'>","<img src='../img/CodeCogsEqn_2.png' class='img-responsive formel_pic'>","<img class='img-responsive formel_pic' src='../img/CodeCogsEqn_3.png'>"
                 ],
                 "korrekt": [
                     "1"
                 ],
-                "feedback": "Hvad er en realistisk bølgelængde for en grøn laser?"
+                "feedback": "Varmefylden for vand er "
             },{
                 "eventtype": "svarknap",
                 "tekst": "Et stof har en varmefylde på 250 <div class='inline_pic_container'> <img class='img-responsive' src='../img/CodeCogsEqn_4.png'> </div> <br/>Stoffet vejer 2 kg. Vi tilfører energien ∆E=1000 J. <br>Hvor meget stiger temperaturen?",

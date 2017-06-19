@@ -10,12 +10,14 @@ var lock_mode = true;
 
 $(document).ready(function() {
 
+
+
     $(".new_window_link").css("opacity", "0");
 
     //opgave_nummer = window.location.href.substring(window.location.href.length - 5, window.location.href.length - 6);
 
 
-    console.log("OPDSAJK: " + opgave_nummer);
+    //console.log("OPDSAJK: " + opgave_nummer);
 
 
     var urlvar = ReturnURLPerameters();
@@ -26,6 +28,7 @@ $(document).ready(function() {
 
     init();
 
+    rotateCheck();
 });
 
 /*=============================================
@@ -98,14 +101,14 @@ function init() {
 
     //initVidQuiz(5);
 
-    clicked_nav($(".btn-nav").eq(active_slide));
+    clicked_nav($(".btn-nav").eq(active_slide), "init");
 
 }
 
 /*=====  End of Section comment block  ======*/
 
 
-function clicked_nav(obj) {
+function clicked_nav(obj, init) {
 
 
 
@@ -132,19 +135,22 @@ function clicked_nav(obj) {
         //microhint(obj, "Se filmen før du går videre");
         microhint($(".btn-nav").eq(complete_slides), "Du skal være færdig med denne fane, før du kan gå videre.");
     } else {
-        active_slide = indeks;
 
-        var contentHTML = "";
-        contentHTML += "<div class='slide_container content_" + indeks + "'> " + jsonSlides[indeks].html_content + "</div>";
+        if (active_slide != indeks || init == "init") {
+            active_slide = indeks;
 
-        $(".main_container").html(contentHTML);
+            var contentHTML = "";
+            contentHTML += "<div class='slide_container content_" + indeks + "'> " + jsonSlides[indeks].html_content + "</div>";
 
-        $(".ytp-thumbnail-overlay-image").hide();
+            $(".main_container").html(contentHTML);
 
-        //console.log("URL:  " + urlen);
+            $(".ytp-thumbnail-overlay-image").hide();
 
-        $(".btn-nav").removeClass("vuc-info-active");
-        $(".btn-nav").eq(indeks).addClass("vuc-info-active");
+            //console.log("URL:  " + urlen);
+
+            $(".btn-nav").removeClass("vuc-info-active");
+            $(".btn-nav").eq(indeks).addClass("vuc-info-active");
+        }
     }
 
     //$(".new_window_link").hide();
@@ -271,10 +277,14 @@ function slide_complete(comp_num) {
 function returnLastStudentSession() {
     window.osc = Object.create(objectStorageClass);
 
-    if (opgave_nummer == 1) {
-        osc.init('student_forsoeg_opg_b4');
-    } else if (opgave_nummer == 2) {
-        osc.init('student_forsoeg_opg_2_b123');
+    if (opgave_nummer == 1 && lock_mode == true) {
+        osc.init('student_forsoeg_opg_1_locked');
+    } else if (opgave_nummer == 1 && lock_mode == false) {
+        osc.init('student_forsoeg_opg_1_free');
+    } else if (opgave_nummer == 2 && lock_mode == true) {
+        osc.init('student_forsoeg_opg_2_locked');
+    } else if (opgave_nummer == 2 && lock_mode == false) {
+        osc.init('student_forsoeg_opg_2_free');
     }
 
     osc.exist('jsonData');

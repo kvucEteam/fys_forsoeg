@@ -127,6 +127,7 @@ td {
     padding: 4px 16px 4px 15px;
     width: 100%;
     text-align: left;
+    cursor: pointer;
 }
 
 .btn_chosen {
@@ -184,6 +185,7 @@ table {
 .correctliste {
     margin-left: 35px;
     margin-top: 0;
+    font-size: 24px;
 }
 
 .container_tekst {
@@ -199,6 +201,7 @@ table {
     font-size: 1.6vw;
     padding: 12px;
     width: 100%;
+    text-align: center;
 }
 
 .hint{
@@ -212,11 +215,20 @@ table {
     font-size: 2vw;
 }
 
+.dot{
+    font-size: 12px;
+}
+
 .formel_pic{
     width: 25%;
     background-color: rgba(231,230,226,.4);
     padding: 2px;
     border-radius: 8px;
+    text-align: center;
+      width: 35%;
+    background-color: rgba(231,230,226,1);
+    padding: 12px;
+    border-radius: 8px;*/
 }
 
 .inline_pic_container{

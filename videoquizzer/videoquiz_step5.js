@@ -393,7 +393,7 @@ function commit_answers() {
         if (valgt == spm.korrekt) {
             //console.log("korrekt!");
             total_score++;
-            $(".btn_chosen").css("background-color", "#219121").css("border", "1px solid #0dcea0");
+            $(".btn_chosen").css("background-color", "#219121").css("border", "1px solid #219121");
             $(".score_num").fadeOut(20, function() {
                 $(".score_num").html(total_score + " ud af " + spm_length);
                 $(".score_num").fadeIn(); // Animation complete.
