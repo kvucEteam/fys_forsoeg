@@ -29,7 +29,7 @@
             "label_pos": [66, 8],
             "info_txt": "<h3 class='label_header'>m<sub>metal</sub></h3>Massen af metalloddet."
         }, {
-            "labels_txt": "Vand",
+            "labels_txt": "m<sub>vand</sub>",
             "label_pos": [66, 16],
             "info_txt": "<h3 class='label_header'>m<sub>vand</sub></h3>Massen af vandet i bægeret"
         }, {
