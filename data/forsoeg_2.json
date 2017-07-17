@@ -33,7 +33,7 @@
             "label_pos": [66, 16],
             "info_txt": "<h3 class='label_header'>m<sub>vand</sub></h3>Massen af vandet i bægeret"
         }, {
-            "labels_txt": "T<sub>metal1</sub>",
+            "labels_txt": "T<sub>metal, 1</sub>",
             "label_pos": [66, 24],
             "info_txt": "<h3 class='label_header'>T<sub>metal, 1</sub></h3>Metalloddets starttemperatur. Den bør være 100 grader Celsius. "
         }, {

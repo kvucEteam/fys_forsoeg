@@ -53,7 +53,7 @@
                 "hint": "Her er et hint der muligvis kommer i LateX eller noget andet sjovt."
             }]
         }, {
-            "timestamp": 150,
+            "timestamp": 218,
             "events": [{
                 "eventtype": "svarknap",
                 "tekst": "Hvad er formålet med eksperimentet?",
@@ -91,14 +91,14 @@
                     "Starttemperatur minus sluttemperatur","Sluttemperatur minus starttemperatur", "Det er forskelligt"
                 ],
                 "korrekt": [
-                    "0"
+                    "1"
                 ],
                 "feedback": "∆T kan beregnes som "
             },{
                 "eventtype": "svarknap",
                 "tekst": "Hvad er varmefylden for vand?",
                 "svar": [
-                    "<img src='../img/CodeCogsEqn.png' class='img-responsive formel_pic'>","<img src='../img/CodeCogsEqn_2.png' class='img-responsive formel_pic'>","<img class='img-responsive formel_pic' src='../img/CodeCogsEqn_3.png'>"
+                    "<img src='../img/CodeEqn.png' class='img-responsive formel_pic'>","<img src='../img/CodeEqn_2.png' class='img-responsive formel_pic'>","<img class='img-responsive formel_pic' src='../img/CodeEqn_3.png'>"
                 ],
                 "korrekt": [
                     "1"
@@ -106,7 +106,7 @@
                 "feedback": "Varmefylden for vand er "
             },{
                 "eventtype": "svarknap",
-                "tekst": "Et stof har en varmefylde på 250 <div class='inline_pic_container'> <img class='img-responsive' src='../img/CodeCogsEqn_4.png'> </div> <br/>Stoffet vejer 2 kg. Vi tilfører energien ∆E=1000 J. <br>Hvor meget stiger temperaturen?",
+                "tekst": "Et stof har en varmefylde på 250 <div class='inline_pic_container'> <img class='img-responsive' src='../img/CodeEqn_4.png'> </div> <br/>Stoffet vejer 2 kg. Vi tilfører energien <em>∆E</em> = 1000 J. <br>Hvor meget stiger temperaturen?",
                 "svar": [
                     "2 <sup>o</sup>C","4 <sup>o</sup>C","8 <sup>o</sup>C"
                 ],

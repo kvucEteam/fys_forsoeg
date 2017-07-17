@@ -37,6 +37,8 @@ var intro_header;
 var intro_knap;
 var intro_text;
 
+var studentanswer;
+
 
 
 //Indhold kun til den 'rene' player: 
@@ -44,6 +46,8 @@ var intro_text;
 function loadData(url) {
     console.log("loadData");
     //parent.hello();
+
+
     $.ajax({
         url: url,
         // contentType: "application/json; charset=utf-8",  // Blot en test af tegnsaettet....
@@ -113,6 +117,7 @@ function setUpTube() {
 function onYouTubeIframeAPIReady() {
     setupplayer();
     console.log("onYouTubeIframeAPIReady");
+        $(".video-container").css("padding-top", "0px");
 }
 
 
@@ -283,9 +288,15 @@ function stop_event(tal, taeller) {
     //alert ("akt_runde: " + runde + ", Stops: " + stops.length);
     console.log("runde: "  +runde + ", stops: " + stops.length)
 
-    if (runde >= stops.length-1) {
 
-        if (parent.opgavenummer == 1) { parent.slide_complete(7); } else if (parent.opgavenummer == 2) { parent.slide_complete(6); }
+
+    if (runde >= stops.length-1) {
+var opgavenummer = parent.document.location.href.substring(parent.document.location.href.length-6, parent.document.location.href.length-5);
+
+    console.log("padas: " + opgavenummer);
+
+
+        if (opgavenummer == 1) { parent.slide_complete(7); } else if ( opgavenummer == 2) { parent.slide_complete(6); }
 
 
     }
@@ -397,10 +408,12 @@ function commit_answers() {
             $(".score_num").fadeOut(20, function() {
                 $(".score_num").html(total_score + " ud af " + spm_length);
                 $(".score_num").fadeIn(); // Animation complete.
+                studentanswer = true;
             });
 
         } else {
             $(".btn_chosen").css("background-color", "#ED3E3A").css("border", "1px solid #ed3e3a");
+            studentanswer = false;
         }
 
     } else {
@@ -455,10 +468,17 @@ function feedback() {
     //tween in feedback: 
     $(".svarcontainer").delay(1000).fadeOut(500, function() {
         $(".spm_tekst").fadeOut(0);
-        $(".container_tekst").append("<div class='feedback'><div class='h3'>" + spm.feedback + "</div><div class = 'h4'><div class='correct_answers btn-success'>Rigtig besvarelse: </div>" + correct_answers + "<br/></div>");
+        $(".container_tekst").append("<div class='feedback'><div class='h4'>" + spm.feedback + "</div><div class = 'h4'>" + correct_answers + "<br/></div>");
+        //$(".container_tekst").append("<div class='feedback'><div class='h4'>" + spm.feedback + "</div><div class = 'h4'><div class='correct_answers btn-success'>Rigtig besvarelse: </div>" + correct_answers + "<br/></div>");
         $(".popud").append("<div class ='btn btn-default btn-lg btn_videre'>Fortsæt</div>");
         $(".feedback").fadeOut(0);
         $(".feedback").fadeIn(1000);
+        if (studentanswer == true){
+        microhint($(".correctliste"), "<div class='microhint_label_success'>Rigtigt</div>Klik på fortsæt for at gå videre i opgaven");
+        }else{
+            microhint($(".correctliste"), "<div class='microhint_label_danger'>Forkert</div>Det rigtige svar står herover");
+        }
+     
         $("#overlay").click(next_event);
     });
 }
@@ -521,7 +541,7 @@ function next_event() {
 function slutFeedback() {
     //console.log("slut");
     $("#overlay").unbind();
-    $(".popud").html("<h3 class = 'forfra'>Du har besvaret alle spørgsmålene. <br>Du svarede rigtigt på " + total_score + " ud af " + total_spm + " spørgsmål.</h3><div class='btn btn-default btn-lg forfra_knap'>Start forfra</div><div class='btn btn-default btn-lg continue_film'>Se resten af filmen</div>");
+    $(".popud").html("<h3 class = 'forfra'>Du har besvaret alle spørgsmålene. <br>Du svarede rigtigt på " + total_score + " ud af " + total_spm + " spørgsmål.</h3><div class='btn btn-default btn-lg forfra_knap'>Start forfra</div><br/><div class='btn btn-default btn-lg continue_film'>Se resten af filmen</div>");
     $(".forfra_knap").click(function() {
         //console.log ("ost");
         location.reload();

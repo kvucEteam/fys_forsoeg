@@ -70,9 +70,9 @@
     left: 0;
     /* margin: 0 auto; */
     position: absolute;
-    left: 60%;
+    left: 50%;
     top: 2%;
-    width: 30%;
+    width: 45%;
     z-index: 100;
     height: 100%;
 }
@@ -128,6 +128,7 @@ td {
     width: 100%;
     text-align: left;
     cursor: pointer;
+    font-family: arial;
 }
 
 .btn_chosen {
@@ -183,9 +184,8 @@ table {
 }
 
 .correctliste {
-    margin-left: 35px;
     margin-top: 0;
-    font-size: 24px;
+    font-size: 2vw;
 }
 
 .container_tekst {
@@ -225,9 +225,8 @@ table {
     padding: 2px;
     border-radius: 8px;
     text-align: center;
-      width: 35%;
-    background-color: rgba(231,230,226,1);
-    padding: 12px;
+    width: 25%;
+    background-color: rgba(231,230,226,.8);
     border-radius: 8px;*/
 }
 
@@ -237,4 +236,11 @@ table {
     display: inline-table;
     margin-top: 7px;
 
+}
+
+.container-fluid{
+    padding: 0px;
+}
+
+.microhint{box-shadow: 2px 2px 5px #111;
 }

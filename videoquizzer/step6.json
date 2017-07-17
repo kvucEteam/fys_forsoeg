@@ -50,7 +50,7 @@
                 "eventtype": "svarknap",
                 "tekst": "Hvad siger gitterligningen?",
                 "svar": [
-                    "<b>n <span class='dot'>&#9679</span> λ = d <span class='dot'>&#9679</span> sin(Өn)</b>","<b>n <span class='dot'>&#9679</span> d = λ <span class='dot'>&#9679</span> sin(Өn)</b>","<b>λ <span class='dot'>&#9679</span> d = n <span class='dot'>&#9679</span> sin(Өn)</b>"
+                    "n <span class='dot'>&#9679</span> λ = d <span class='dot'>&#9679</span> sin(Өn)","n <span class='dot'>&#9679</span> d = λ <span class='dot'>&#9679</span> sin(Өn)","λ <span class='dot'>&#9679</span> d = n <span class='dot'>&#9679</span> sin(Өn)"
                 ],
                 "korrekt": [
                     "0"

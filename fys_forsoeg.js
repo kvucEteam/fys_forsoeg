@@ -60,11 +60,11 @@ function init() {
 
     if (opgave_nummer == 1) {
 
-        $(".top_nav_container").append("<br/><a href='data/data_bolgelaengde.xlsx'> <div class='btn btn-primary btn_excel'><span class='glyphicon glyphicon-download-alt'></span> Download Excelark </div></a>");
-        $(".top_nav_container").append("<a href='data/bolgelaengderapport.docx'> <div class='btn btn-primary btn_word'><span class='glyphicon glyphicon-download-alt'></span> Download Wordskabelon </div></a>");
+        $(".top_nav_container").append("<br/><a href='data/data_bolgelaengde.xlsx' target='_blank'> <div class='btn btn-primary btn_excel'><span class='glyphicon glyphicon-download-alt'></span> Download Excelark </div></a>");
+        $(".top_nav_container").append("<a href='data/bolgelaengderapport.docx' target='_blank'> <div class='btn btn-primary btn_word'><span class='glyphicon glyphicon-download-alt'></span> Download Wordskabelon </div></a>");
     } else {
-        $(".top_nav_container").append("<br/><a href='data/data_varmefylde.xlsx'> <div class='btn btn-primary btn_excel'><span class='glyphicon glyphicon-download-alt'></span> Download Excelark </div></a>");
-        $(".top_nav_container").append("<a href='data/varme_fylderapport.docx'> <div class='btn btn-primary btn_word'><span class='glyphicon glyphicon-download-alt'></span> Download Wordskabelon </div></a>");
+        $(".top_nav_container").append("<br/><a href='data/data_varmefylde.xlsx' target='_blank'> <div class='btn btn-primary btn_excel'><span class='glyphicon glyphicon-download-alt'></span> Download Excelark </div></a>");
+        $(".top_nav_container").append("<a href='data/varmefylde_rapport.docx' target='_blank'> <div class='btn btn-primary btn_word'><span class='glyphicon glyphicon-download-alt'></span> Download Wordskabelon </div></a>");
     }
 
     $(".btn_excel").fadeOut(0);
