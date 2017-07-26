@@ -39,6 +39,8 @@ $(document).ready(function() {
 
 function init() {
 
+
+
     //alert("opgave_nummer:" + opgave_nummer);
 
     jsonSlides = jsonData[0].slides;
@@ -102,6 +104,16 @@ function init() {
     //initVidQuiz(5);
 
     clicked_nav($(".btn-nav").eq(active_slide), "init");
+
+    if (complete_slides == 0){
+        microhint($(".btn-nav").eq(0), "Klik på navigationen og undersøg alle forsøgets dele.", true);
+        microhint($(".embed-responsive"), "Se filmen før du går videre", true);
+
+        $("body").click(function(){
+            $(".microhint").remove();
+        });
+
+    }
 
 }
 
